@@ -1,15 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import { DbService } from "../services/db.service";
 import { MessageService } from "../message/message.service";
+import { UserService } from "../user/user.service";
+import { UserAuth } from "./userAuth";
 import { User } from "../user/user";
 
 @Injectable()
-export class AuthService {
-  currentUser: User = null;
-  email: string;
-  password: string;
+export class AuthService implements OnInit, Observable<UserAuth> {
+  currentUser: UserAuth;
 
-  constructor(private dbService: DbService, private messageService: MessageService) { }
+  constructor(private dbService: DbService, private userService: UserService, private messageService: MessageService) { }
+
+  ngOnInit() {
+    this.currentUser = new UserAuth();
+    this.updateCurrentUser();
+  }
 
   signinUser(email, pass) {
     // console.log(pass);
@@ -22,28 +28,38 @@ export class AuthService {
     // console.log(user.json);
   }
 
-  onAuthStateChanged(callback){
-    let temp = this.dbService.onAuthStateChanged(callback);
-    if(temp) {
-      if(temp.uid) this.currentUser.uid = temp.uid;
-      if(temp.displayName) this.currentUser.displayName = temp.displayName;
-      if(temp.email) this.currentUser.email = temp.email;
-      if(temp.photoURL) this.currentUser.photoURL = temp.photoURL;
-      if(temp.providerId) this.currentUser.providerId = temp.providerId;
-    } else {
-      return this.resetCurrentUser();
-    }
+  onAuthStateChanged(callback) : Observable<UserAuth> {
+    return
   }
 
-  getCurrentUser() {
-    return this.dbService.getCurrentUser();
+  getCurrentUser() : UserAuth {
+    return this.currentUser;
   }
+
+  // getCurrentUserEmail(): currentUser.email {
+  //   return this.currentUser.email;
+  // }
 
   signOut() {
     return this.dbService.signOut();
   }
 
   private resetCurrentUser() {
-    this.currentUser = new User();
+    this.currentUser = new UserAuth();
+  }
+
+  private updateCurrentUser() {
+    let temp = this.dbService.onAuthStateChanged(temp => {
+        if (temp) {
+          if (temp.uid) this.currentUser.uid = temp.uid;
+          if (temp.displayName) this.currentUser.displayName = temp.displayName;
+          if (temp.email) this.currentUser.email = temp.email;
+          if (temp.photoURL) this.currentUser.photoURL = temp.photoURL;
+          if (temp.providerId) this.currentUser.providerId = temp.providerId;
+        } else {
+          this.resetCurrentUser();
+        }
+      }
+    );
   }
 }

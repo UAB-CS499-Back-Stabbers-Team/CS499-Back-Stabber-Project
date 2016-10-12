@@ -5,27 +5,27 @@ import {User} from "../user/user";
 
 @Injectable()
 export class DbService {
-  constructor(private firebaseService: FirebaseService, private messageService: MessageService){}
+  constructor(private db: FirebaseService, private messageService: MessageService){}
 
   signinUser(email, pass) {
     console.log(email, pass);
-    return this.firebaseService.signinUser(email, pass);
+    return this.db.signinUser(email, pass);
   }
 
   createUser(email, pass) {
     console.log(email, pass);
-    return this.firebaseService.createUser(email, pass);
+    return this.db.createUser(email, pass);
   }
 
-  onAuthStateChanged(callback): User {
-    return this.firebaseService.onAuthStateChanged(callback);
+  onAuthStateChanged(callback) : any {
+    return this.db.onAuthStateChanged(callback);
   }
 
   getCurrentUser() {
-    this.firebaseService.getCurrentUser();
+    this.db.getCurrentUser();
   }
 
   signOut() {
-    return this.firebaseService.signOut();
+    return this.db.signOut();
   }
 }
