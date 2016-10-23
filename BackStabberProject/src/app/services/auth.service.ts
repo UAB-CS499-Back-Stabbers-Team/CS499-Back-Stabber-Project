@@ -1,26 +1,29 @@
-import { Injectable, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import { Injectable } from '@angular/core';
+import { Observable, Subject, Subscription } from 'rxjs/Rx';
 import { DbService } from "../services/db.service";
+import { Router } from '@angular/router';
 import { MessageService } from "../message/message.service";
 import { UserService } from "../user/user.service";
 import { UserAuth } from "./userAuth";
 import { User } from "../user/user";
 
 @Injectable()
-export class AuthService implements OnInit, Observable<UserAuth> {
-  currentUser: UserAuth;
+export class AuthService {
+  authUser: UserAuth;
+  authSub: Subscription;
 
-  constructor(private dbService: DbService, private userService: UserService, private messageService: MessageService) { }
-
-  ngOnInit() {
-    this.currentUser = new UserAuth();
-    this.updateCurrentUser();
+  constructor(private dbService: DbService, private messageService: MessageService, private router: Router) {
+    this.authUser = new UserAuth();
   }
 
   signinUser(email, pass) {
-    // console.log(pass);
     return this.dbService.signinUser(email, pass);
-    // console.log(user.json);
+  }
+
+  signOut() {
+    let temp = this.dbService.signOut();
+    this.router.navigate(['/']);
+    return temp;
   }
 
   createUser(email, pass) {
@@ -28,38 +31,45 @@ export class AuthService implements OnInit, Observable<UserAuth> {
     // console.log(user.json);
   }
 
-  onAuthStateChanged(callback) : Observable<UserAuth> {
-    return
+  onAuthStateChanged(): Observable<UserAuth> {
+    const subject = new Subject<UserAuth>();
+    this.authSub = this.dbService.onAuthStateChanged().subscribe(
+      x => {
+        this.updateCurrentUser(x);
+        subject.next(this.authUser);
+      },
+      e => {
+        this.signOut();
+      }
+    );
+    return subject.asObservable();
   }
 
   getCurrentUser() : UserAuth {
-    return this.currentUser;
+    return this.authUser;
   }
 
-  // getCurrentUserEmail(): currentUser.email {
-  //   return this.currentUser.email;
-  // }
-
-  signOut() {
-    return this.dbService.signOut();
+  getCurrentUserEmail(): string {
+    return this.authUser.email;
   }
 
   private resetCurrentUser() {
-    this.currentUser = new UserAuth();
+    this.authUser = new UserAuth();
   }
 
-  private updateCurrentUser() {
-    let temp = this.dbService.onAuthStateChanged(temp => {
-        if (temp) {
-          if (temp.uid) this.currentUser.uid = temp.uid;
-          if (temp.displayName) this.currentUser.displayName = temp.displayName;
-          if (temp.email) this.currentUser.email = temp.email;
-          if (temp.photoURL) this.currentUser.photoURL = temp.photoURL;
-          if (temp.providerId) this.currentUser.providerId = temp.providerId;
-        } else {
-          this.resetCurrentUser();
-        }
-      }
-    );
+  private updateCurrentUser(temp) {
+    if (temp) {
+      this.authUser.uid = temp.uid;
+      this.authUser.displayName = temp.displayName;
+      this.authUser.email = temp.email;
+      this.authUser.photoURL = temp.photoURL;
+      this.authUser.providerId = temp.providerId;
+    } else {
+      this.resetCurrentUser();
+    }
+  }
+
+  ngOnDestroy() {
+    this.authSub.unsubscribe;
   }
 }

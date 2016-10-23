@@ -1,22 +1,23 @@
 import { Component } from '@angular/core';
-import {FirebaseService} from "./services/firebase/firebase.service";
-import {AuthService} from "./services/auth.service";
-import {UserService} from "./user/user.service";
-import {MessageService} from "./message/message.service";
-import {DbService} from "./services/db.service";
+// import { AngularFire } from 'angularfire2';
+import { FirebaseService } from "./services/firebase/firebase.service";
+import { AuthService } from "./services/auth.service";
+import { UserService } from "./user/user.service";
+import { MessageService } from "./message/message.service";
+import { DbService } from "./services/db.service";
 // declare var currentUser: any;
 
 @Component({
   selector: 'bsp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [AuthService, UserService, MessageService, DbService, FirebaseService]
+  providers: [FirebaseService, AuthService, UserService, MessageService, DbService]
 })
 export class AppComponent {
   // title = 'app works!';
   // currentUser: any;
 
-  // constructor(private authService: FirebaseService) {}
+  // constructor(private af: AngularFire) {}
 
   // ngOnInit() {
   //   // this.signedinUser = this.authService.signedinUser;
