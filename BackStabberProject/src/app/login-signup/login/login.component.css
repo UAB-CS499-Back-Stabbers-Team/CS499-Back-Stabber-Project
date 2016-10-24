@@ -1,0 +1,16 @@
+.input {
+  margin-top: 20px;
+  /*margin-bottom: 20px;*/
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.block-inline {
+  display: inline-block;
+}
+
+.no-margin {
+  margin: 0;
+}

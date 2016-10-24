@@ -21,6 +21,9 @@ import {LoginComponent} from "./login-signup/login/login.component";
 import {SignupComponent} from "./login-signup/signup/signup.component";
 import {RangeValidatorDirective} from "./shared/validation/rangeValidator.directive";
 import {EqualValidator} from "./shared/validation/EqualValidator.directive";
+import {WorldComponent} from "./world/world.component";
+import {StoryComponent} from "./world/story/story.component";
+import {ChoiceComponent} from "./world/story/choice/choice.component";
 
 @NgModule({
   declarations: [
@@ -39,9 +42,10 @@ import {EqualValidator} from "./shared/validation/EqualValidator.directive";
     LoginComponent,
     SignupComponent,
     RangeValidatorDirective,
-    EqualValidator
-    // TemplateRef,
-    // ViewContainerRef
+    EqualValidator,
+    WorldComponent,
+    StoryComponent,
+    ChoiceComponent
   ],
   imports: [
     BrowserModule,

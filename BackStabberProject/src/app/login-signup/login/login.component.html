@@ -1,0 +1,22 @@
+<h2>
+  Login
+</h2>
+<div *ngIf="dberror" class="alert alert-danger">{{dberror}}</div>
+<form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="myForm">
+  <div>
+    <div class="input input-group-lg">
+      <input type="text" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="email" formControlName="email">
+    </div>
+
+    <div class="input input-group-lg">
+      <input type="password" class="form-control no-errors" id="password" name="password" placeholder="Password" [(ngModel)]="password" formControlName="password">
+    </div>
+
+  </div>
+  <button type="submit" class="btn btn-lg btn-default">Login</button>
+  <!--<button type="submit" class="btn btn-lg btn-default" [disabled]="!myForm.valid">Login</button>-->
+  <!--Errors: {{myForm.controls.['email'].errors.minlength}}-->
+  <!--<div *ngFor="let er of myForm.controls['email'].errors">{{er}}</div>-->
+</form>
+
+

@@ -1,0 +1,35 @@
+<h2>
+  Sign-Up
+</h2>
+<div *ngIf="dberror" class="alert alert-danger">{{dberror}}</div>
+<form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="myForm">
+  <div>
+    <div class="input input-group-lg">
+      <input type="text" class="form-control" [class.invalid]="!em.valid" [class.valid]="em.valid" id="email" name="email" placeholder="Email" [(ngModel)]="email" formControlName="email">
+    </div>
+    <div *ngIf="em.errors && em.touched" class="alert alert-danger no-dots">Email is gimped:
+      <li *ngIf="em.hasError('required')">Minimum length of 6 characters</li>
+      <li *ngIf="em.hasError('minlength')">Minimum length of 6 characters</li>
+      <li *ngIf="em.hasError('maxlength')">Maximum length of 128 characters</li>
+      <li *ngIf="em.hasError('pattern')">Invalid email address</li>
+    </div>
+    <div class="input input-group-lg">
+      <input type="password" class="form-control" [class.invalid]="!pass.valid" [class.valid]="pass.valid" id="password" name="password" placeholder="Password" [(ngModel)]="password" formControlName="password" (keyup)="confPass()">
+    </div>
+    <div *ngIf="pass.errors && pass.touched" class="alert alert-danger no-dots">That password is whack:
+      <li *ngIf="pass.hasError('required')">Minimum length of 6 characters</li>
+      <li *ngIf="pass.hasError('minlength')">Minimum length of 6 characters</li>
+      <li *ngIf="pass.hasError('maxlength')">Maximum length of 128 characters</li>
+    </div>
+    <div class="input input-group-lg">
+      <input type="password" class="form-control invalid" [class.invalid]="!passCon.valid || !passConfirmed" [class.valid]="passCon.valid && passConfirmed" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password" [(ngModel)]="passwordConfirm" formControlName="passwordConfirm" (keyup)="confPass()">
+    </div>
+    <div *ngIf="(passCon.errors || !passConfirmed) && passCon.touched" class="alert alert-danger no-dots">Ummmm, WRONG! Try Again:
+      <li *ngIf="passCon.hasError('required')">Minimum length of 6 characters</li>
+      <li *ngIf="passCon.hasError('minlength')">Minimum length of 6 characters</li>
+      <li *ngIf="passCon.hasError('maxlength')">Maximum length of 128 characters</li>
+      <li *ngIf="!passConfirmed">Password does not match Confirm Password</li>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-lg btn-default" [disabled]="!myForm.valid || !passConfirmed || dberror.count">Sign-Up</button>
+</form>
