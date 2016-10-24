@@ -1,90 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08120333-c724-4f57-8bbd-a7a5c3ef9223" name="Default" comment="Added world components, unfinished with errors">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/database.rules.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/firebase.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/signup/signup.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/signup/signup.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/signup/signup.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/signup/signup.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/signup/signup.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/signup/signup.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account-edit.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account-edit.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account-edit.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account-edit.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account-edit.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account-edit.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-account/user-account.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile-edit.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile-edit.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile-edit.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile-edit.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile-edit.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile-edit.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user-profile/user-profile.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.spec.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.routing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.routing.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.spec.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" />
+    <list default="true" id="08120333-c724-4f57-8bbd-a7a5c3ef9223" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" />
     </list>
     <ignored path="CS499-Back-Stabber-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -166,8 +91,8 @@
       <file leaf-file-name="world.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            <state relative-caret-position="452">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="32" selection-end-column="46" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -185,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="story.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="story.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="22">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -197,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="choice.component.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="choice.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+            <state relative-caret-position="154">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -232,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Stories/ReadMe.txt" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/about.component.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/angular-cli.json" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/header/header.component.html" />
@@ -279,10 +203,11 @@
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/story/story.component.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/story/story.component.html" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.html" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.html" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts" />
       </list>
     </option>
   </component>
@@ -714,7 +639,7 @@
       <workItem from="1475874698879" duration="31216000" />
       <workItem from="1476059133279" duration="5786000" />
       <workItem from="1476101853522" duration="21319000" />
-      <workItem from="1477255192382" duration="10926000" />
+      <workItem from="1477255192382" duration="11529000" />
     </task>
     <task id="LOCAL-00001" summary="Added a Stories folder.">
       <created>1475093241484</created>
@@ -737,22 +662,29 @@
       <option name="project" value="LOCAL" />
       <updated>1477256113690</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added world components, unfinished with errors">
+      <created>1477317486802</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477317486802</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122520000" />
+    <option name="totallyTimeSpent" value="123123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31324404" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11579362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11579362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16741072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16741072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15178572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1019,16 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -1063,12 +985,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="452">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="32" selection-end-column="46" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1083,29 +1023,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.html">
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+        <state relative-caret-position="154">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

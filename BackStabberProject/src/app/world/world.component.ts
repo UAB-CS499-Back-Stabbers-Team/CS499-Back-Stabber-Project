@@ -21,16 +21,16 @@ export class WorldComponent implements OnInit {
   constructor(private firebaseService: FirebaseService, private router: Router) {}
 
   ngOnInit() {
-    this.myForm = new FormGroup(
-      {
-        story.premis = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
-        story.choice1: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
-        story.choice2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)])
-      }
-    );
-    this.story = this.myForm.controls['mono'];
-    this.choice1 = this.myForm.controls['choice1'];
-    this.choice2 = this.myForm.controls['choice2'];
+    // this.myForm = new FormGroup(
+    //   {
+    //     story.premis = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
+    //     story.choice1: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
+    //     story.choice2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)])
+    //   }
+    // );
+    // this.story = this.myForm.controls['mono'];
+    // this.choice1 = this.myForm.controls['choice1'];
+    // this.choice2 = this.myForm.controls['choice2'];
   }
 
   success() {

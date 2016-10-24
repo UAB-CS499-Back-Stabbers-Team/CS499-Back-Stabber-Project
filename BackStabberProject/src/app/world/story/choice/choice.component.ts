@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './choice.component.html',
   styleUrls: ['./choice.component.css']
 })
-export class ChoiceComponent implements OnInit {
+export class ChoiceComponent {
   @Input() editMode: boolean;
   @Input() id: number;
   @Input() image: any;
