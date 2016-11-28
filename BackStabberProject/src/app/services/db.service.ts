@@ -8,6 +8,10 @@ export class DbService {
 
   constructor(private db: FirebaseService, private messageService: MessageService) {  }
 
+  public getChildRef(child: string) {
+    return this.db.getChildRef(child);
+  }
+
   signinUser(email, pass) {
     return this.db.signinUser(email, pass);
   }

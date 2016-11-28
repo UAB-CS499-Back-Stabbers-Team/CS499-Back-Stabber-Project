@@ -19,9 +19,16 @@ var FirebaseService = (function () {
             photoURL: null,
             providerId: null
         };
-        console.log('firebase consructor');
-        this.get();
+        // this.db.ref().child('objects').on('value', snap => console.log(snap.val()));
     }
+    FirebaseService.prototype.getChildRef = function (child) {
+        // console.log('firebase');
+        var ref = this.db.ref().child(child);
+        // ref.on('value', snap => console.log(snap.val()));
+        // console.log(ref);
+        // ref.on('child_added', snap => console.log(snap.val()))
+        return ref;
+    };
     FirebaseService.prototype.signinUser = function (email, pass) {
         return this.auth.signInWithEmailAndPassword(email, pass);
     };
@@ -57,9 +64,16 @@ var FirebaseService = (function () {
     FirebaseService.prototype.signOut = function () {
         return this.auth.signOut();
     };
-    FirebaseService.prototype.get = function () {
+    FirebaseService.prototype.getRef = function () {
+        return this.db.ref();
+    };
+    FirebaseService.prototype.getAll = function (path) {
+        var ar = path.split('/');
+        var ref = this.db.ref().child(ar[0]);
+    };
+    FirebaseService.prototype.get = function (key) {
         // this.db.ref('objects').set({toast: 'whole grain'});
-        var dbRefObject = this.db.ref().child('objects');
+        var dbRefObject = this.db.ref().child('objects'); // create the object reference
         dbRefObject.on('value', function (snap) { return console.log(snap.val()); }); // value is the event type that will sync the data realtime
         // console.log(ref);
         // list

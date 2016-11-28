@@ -13,13 +13,22 @@
       <ul class="nav navbar-nav">
         <li routerLinkActive="active"><a [routerLink]="['/']" >Home</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/about']" >About</a></li>
+        <li *ngIf="isAuth" class="dropdown" rbDropdown>
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/moral-rule']">Moral Rule</a></li>
+            <li><a [routerLink]="['/world']">World</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a style="cursor: pointer">Future Link</a></li>
+          </ul>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!isAuth"><a [routerLink]="['/login-signup']">Login or Sign-up</a></li>
         <li *ngIf="isAuth" class="dropdown" rbDropdown>
-        <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{authUser.email}} <span class="caret"></span></a>
-        <ul class="dropdown-menu">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{authUser.email}} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
             <li><a [routerLink]="['/user/:id']">Profile</a></li>
             <li><a [routerLink]="['/user/:id/Account']">Account</a></li>
             <li role="separator" class="divider"></li>

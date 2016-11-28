@@ -7,22 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var StoryComponent = (function () {
-    function StoryComponent(firebaseService, router) {
-        this.firebaseService = firebaseService;
+    function StoryComponent(worldService, router) {
+        this.worldService = worldService;
         this.router = router;
         this.dberror = '';
     }
     StoryComponent.prototype.ngOnInit = function () {
-        //   this.myForm = new FormGroup(
-        //     {
-        //       mono: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
-        //       choice1: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
-        //       choice2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)])
-        //     }
-        //   );
-        //   this.story = this.myForm.controls['mono'];
-        //   this.choice1 = this.myForm.controls['choice1'];
-        //   this.choice2 = this.myForm.controls['choice2'];
+        // this.myForm = new FormGroup(
+        //   {
+        //     seq: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(2)]),
+        //     mono: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
+        //     choices: new FormArray([new ChoiceComponent().formGroup()]) //new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
+        //   }
+        // );
+        // this.mono = this.myForm.controls['mono'];
+        // this.choice[0] = this.myForm.controls['choice'];
+        // this.choice[1] = this.myForm.controls['choice2'];
     };
     StoryComponent = __decorate([
         core_1.Component({

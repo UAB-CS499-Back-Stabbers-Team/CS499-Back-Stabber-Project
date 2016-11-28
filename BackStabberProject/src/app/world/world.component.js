@@ -6,34 +6,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var WorldComponent = (function () {
-    function WorldComponent(firebaseService, router) {
-        this.firebaseService = firebaseService;
+    function WorldComponent(db, router) {
+        this.db = db;
         this.router = router;
-        this.story = {
-            premis: null,
-            choice1: null,
-            choice2: null
-        };
+        // stories: Story[];
         this.dberror = '';
     }
     WorldComponent.prototype.ngOnInit = function () {
-        // this.myForm = new FormGroup(
-        //   {
-        //     story.premis = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
-        //     story.choice1: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
-        //     story.choice2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)])
-        //   }
-        // );
+        this.myForm = new forms_1.FormGroup({
+            mono: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(6), forms_1.Validators.maxLength(516)]),
+            stories: new forms_1.FormArray([this.storyInit()])
+        });
         // this.story = this.myForm.controls['mono'];
         // this.choice1 = this.myForm.controls['choice1'];
         // this.choice2 = this.myForm.controls['choice2'];
     };
+    WorldComponent.prototype.storyInit = function () {
+        return new forms_1.FormGroup({
+            title: new forms_1.FormControl(''),
+            prologue: new forms_1.FormControl(''),
+            choices: new forms_1.FormArray([this.choiceInit()])
+        });
+    };
+    WorldComponent.prototype.addStory = function () {
+        this.myForm.controls['stories'].push(this.storyInit());
+    };
+    WorldComponent.prototype.choiceInit = function () {
+        return new forms_1.FormGroup({
+            text: new forms_1.FormControl(''),
+            image: new forms_1.FormControl('')
+        });
+    };
+    WorldComponent.prototype.addChoice = function (i) {
+        this.myForm.controls['stories'].at(i).controls['choices'].push(this.choiceInit());
+    };
     WorldComponent.prototype.success = function () {
-        console.log('The user was signed in.');
-        this.router.navigate(['/']);
+        // console.log('The user was signed in.');
+        // this.router.navigate(['/']);
+    };
+    WorldComponent.prototype.onRemoveItem = function (i) {
     };
     WorldComponent.prototype.onSubmit = function () {
+        console.log(this.myForm);
         // const world = this.firebaseService.put('world', {this.myForm.controls['mono'].value, this.myForm.controls['story'], this.myForm.controls['choice1'].value, this.myForm.controls['choice1'].value})
         //   .then(x => {
         //     console.log('In login with success');

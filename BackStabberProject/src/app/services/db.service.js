@@ -11,6 +11,9 @@ var DbService = (function () {
         this.db = db;
         this.messageService = messageService;
     }
+    DbService.prototype.getChildRef = function (child) {
+        return this.db.getChildRef(child);
+    };
     DbService.prototype.signinUser = function (email, pass) {
         return this.db.signinUser(email, pass);
     };

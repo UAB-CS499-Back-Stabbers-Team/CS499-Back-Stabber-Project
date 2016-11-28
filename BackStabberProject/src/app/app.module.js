@@ -30,6 +30,10 @@ var EqualValidator_directive_1 = require("./shared/validation/EqualValidator.dir
 var world_component_1 = require("./world/world.component");
 var story_component_1 = require("./world/story/story.component");
 var choice_component_1 = require("./world/story/choice/choice.component");
+var moral_rule_component_1 = require("./moral-rule/moral-rule.component");
+var world_list_component_1 = require("./world/world-list/world-list.component");
+var world_edit_component_1 = require("./world/world-edit/world-edit.component");
+var world_detail_component_1 = require("./world/world-detail/world-detail.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -53,8 +57,12 @@ var AppModule = (function () {
                 rangeValidator_directive_1.RangeValidatorDirective,
                 EqualValidator_directive_1.EqualValidator,
                 world_component_1.WorldComponent,
+                world_list_component_1.WorldListComponent,
+                world_edit_component_1.WorldEditComponent,
+                world_detail_component_1.WorldDetailComponent,
                 story_component_1.StoryComponent,
-                choice_component_1.ChoiceComponent
+                choice_component_1.ChoiceComponent,
+                moral_rule_component_1.MoralRuleComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

@@ -9,18 +9,6 @@ var core_1 = require('@angular/core');
 var ChoiceComponent = (function () {
     function ChoiceComponent() {
     }
-    __decorate([
-        core_1.Input()
-    ], ChoiceComponent.prototype, "editMode");
-    __decorate([
-        core_1.Input()
-    ], ChoiceComponent.prototype, "id");
-    __decorate([
-        core_1.Input()
-    ], ChoiceComponent.prototype, "image");
-    __decorate([
-        core_1.Input()
-    ], ChoiceComponent.prototype, "text");
     ChoiceComponent = __decorate([
         core_1.Component({
             selector: 'bsp-choice',

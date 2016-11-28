@@ -1,24 +1,24 @@
 <h2>
   Story
 </h2>
-<div *ngIf="dberror" class="alert alert-danger">{{dberror}}</div>
-<form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="myForm">
-  <div>
-    <div class="input input-group-lg">
-      <textarea type="textarea" class="form-control" id="story" name="story" placeholder="Story" [(ngModel)]="story" formControlName="story"></textarea>
-    </div>
+<!--<div *ngIf="dberror" class="alert alert-danger">{{dberror}}</div>-->
+<!--<form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="myForm">-->
+  <!--<div>-->
+    <!--<div class="input input-group-lg">-->
+      <!--<textarea type="textarea" class="form-control" id="story" name="story" placeholder="Story" [(ngModel)]="story" formControlName="story"></textarea>-->
+    <!--</div>-->
 
-    <div class="input input-group-lg">
-      <textarea class="form-control no-errors" id="choice1" name="choice1" placeholder="Choice One" [(ngModel)]="choice1" formControlName="choice1"></textarea>
-    </div>
+    <!--<div class="input input-group-lg">-->
+      <!--<textarea class="form-control no-errors" id="choice1" name="choice1" placeholder="Choice One" [(ngModel)]="choice1" formControlName="choice1"></textarea>-->
+    <!--</div>-->
 
-    <div class="input input-group-lg">
-      <textarea class="form-control no-errors" id="choice2" name="choice2" placeholder="Choice Two" [(ngModel)]="choice2" formControlName="choice2"></textarea>
-    </div>
+    <!--<div class="input input-group-lg">-->
+      <!--<textarea class="form-control no-errors" id="choice2" name="choice2" placeholder="Choice Two" [(ngModel)]="choice2" formControlName="choice2"></textarea>-->
+    <!--</div>-->
 
-  </div>
-  <button type="submit" class="btn btn-lg btn-default">Login</button>
+  <!--</div>-->
+  <!--<button type="submit" class="btn btn-lg btn-default">Login</button>-->
   <!--<button type="submit" class="btn btn-lg btn-default" [disabled]="!myForm.valid">Login</button>-->
   <!--Errors: {{myForm.controls.['email'].errors.minlength}}-->
   <!--<div *ngFor="let er of myForm.controls['email'].errors">{{er}}</div>-->
-</form>
+<!--</form>-->

@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FirebaseService } from "../../services/firebase/firebase.service";
+import {Story} from "./Story";
+import {WorldService} from "../world.service";
+import {Choice} from "./choice/Choice";
+import {ChoiceComponent} from "./choice/choice.component";
 
 @Component({
   selector: 'bsp-world',
@@ -10,25 +14,65 @@ import { FirebaseService } from "../../services/firebase/firebase.service";
 })
 export class StoryComponent implements OnInit {
   myForm: FormGroup;
-  mono: FormControl;
-  choice1: FormControl;
-  choice2: FormControl;
+  story: Story;
+
   dberror: string = '';
-  constructor(private firebaseService: FirebaseService, private router: Router) {}
+
+  constructor(private worldService: WorldService, private router: Router) {}
 
   ngOnInit() {
-  //   this.myForm = new FormGroup(
-  //     {
-  //       mono: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
-  //       choice1: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
-  //       choice2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)])
-  //     }
-  //   );
-  //   this.story = this.myForm.controls['mono'];
-  //   this.choice1 = this.myForm.controls['choice1'];
-  //   this.choice2 = this.myForm.controls['choice2'];
+    // this.myForm = new FormGroup(
+    //   {
+    //     seq: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(2)]),
+    //     mono: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
+    //     choices: new FormArray([new ChoiceComponent().formGroup()]) //new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
+    //   }
+    // );
+    // this.mono = this.myForm.controls['mono'];
+    // this.choice[0] = this.myForm.controls['choice'];
+    // this.choice[1] = this.myForm.controls['choice2'];
   }
-  //
+
+  // private initForm(id) {
+    // let seq = '';
+    // let recipeImageUrl = '';
+    // let recipeContent = '';
+    // let fa: FormArray = new FormArray([]);
+    // let id: number;
+    // seq: number;
+    // mono: string;
+    // choices: new FormArray([]);
+    //
+    // if (id) {
+    //   if(this.recipe.hasOwnProperty('ingredients')) {
+    //     for(let i = 0; i < this.recipe.ingredients.length; i++) {
+    //       fa.push(
+    //         new FormGroup(
+    //           {
+    //             name: new FormControl(this.recipe.ingredients[i].name, Validators.required),
+    //             amount: new FormControl(this.recipe.ingredients[i].amount, [Validators.required, Validators.pattern("\\d+")])
+    //           }
+    //         )
+    //       );
+    //     }
+    //   }
+    //   seq = this.recipe.name;
+    //   recipeImageUrl = this.recipe.imagePath;
+    //   recipeContent = this.recipe.description;
+    // }
+
+    // this.recipeForm = this.formBuilder.group({
+    //   name: [recipeName, Validators.required],
+    //   imagePath: [recipeImageUrl, Validators.required],
+    //   description: [recipeContent, Validators.required],
+    //   ingredients: recipeIngredients
+    // });
+  // }
+
+  // private initChoice() {
+  //   return new ChoiceComponent().formGroup();
+  // }
+
   // success() {
   //   console.log('The user was signed in.');
   //   this.router.navigate(['/']);
@@ -56,5 +100,10 @@ export class StoryComponent implements OnInit {
   //       // this.dberror = e;
   //       setTimeout(() => this.dberror = '', 6000);
   //     });
+  // }
+
+  // public isInteger(control:FormControl) : Boolean {
+  //   let value = control.value.trim();
+  //   return (parseFloat(value) == parseInt(value)) && !isNaN(value);
   // }
 }

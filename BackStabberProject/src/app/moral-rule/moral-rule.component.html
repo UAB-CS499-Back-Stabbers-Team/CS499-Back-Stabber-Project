@@ -1,0 +1,29 @@
+<h2 xmlns:style="http://www.w3.org/1999/xhtml">
+  Moral Rules
+</h2>
+<div class="row">
+  <label for="moralRuleForm">Editing: {{editing}}</label>
+  <form id="moralRuleForm" [formGroup]="moralRuleForm" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="row">
+      <div class="col-xs-12">
+        <input type="text" class="form-control" formControlName="name" placeholder="Name" value="{{oldRule.name}}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Save</button>
+        <a class="btn btn-danger" (click)="onCancel()">Cancel</a>
+      </div>
+    </div>
+  </form>
+  <!--<button type="button" class="btn btn-primary" (click)="onAddItem(itemName.value, itemAmount.value)">+</button>-->
+  <!--<button class="btn btn-danger" (click)="onRemoveItem(i)">X</button>-->
+  <hr>
+  <div class="row">
+    <div style="background-color: gray; border: 1px solid black;" *ngFor="let r of keys; let i = index">
+      <div (click)="edit(i)" style="block: inline">{{rules[r].name}}</div>
+      <!--<div (click)="edit(i)" style="block: inline">{{i}} - {{r}}, {{rules[r].name}}</div>-->
+      <button (click)="remove(i)" style="background-color: red">X</button>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,8 @@ var UserComponent = (function () {
         core_1.Component({
             selector: 'bsp-user',
             templateUrl: './user.component.html',
-            styleUrls: ['./user.component.css']
+            styleUrls: ['./user.component.css'],
+            providers: []
         })
     ], UserComponent);
     return UserComponent;

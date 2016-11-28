@@ -24,6 +24,10 @@ import {EqualValidator} from "./shared/validation/EqualValidator.directive";
 import {WorldComponent} from "./world/world.component";
 import {StoryComponent} from "./world/story/story.component";
 import {ChoiceComponent} from "./world/story/choice/choice.component";
+import {MoralRuleComponent} from "./moral-rule/moral-rule.component";
+import {WorldListComponent} from "./world/world-list/world-list.component";
+import {WorldEditComponent} from "./world/world-edit/world-edit.component";
+import {WorldDetailComponent} from "./world/world-detail/world-detail.component";
 
 @NgModule({
   declarations: [
@@ -44,8 +48,12 @@ import {ChoiceComponent} from "./world/story/choice/choice.component";
     RangeValidatorDirective,
     EqualValidator,
     WorldComponent,
+    WorldListComponent,
+    WorldEditComponent,
+    WorldDetailComponent,
     StoryComponent,
-    ChoiceComponent
+    ChoiceComponent,
+    MoralRuleComponent
   ],
   imports: [
     BrowserModule,

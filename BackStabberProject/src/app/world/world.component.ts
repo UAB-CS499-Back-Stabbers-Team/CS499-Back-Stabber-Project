@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
-import {FirebaseService} from "../services/firebase/firebase.service";
+// import { DbService } from "../services/db.service";
+// import { FirebaseService } from "../services/firebase/firebase.service";
+import { Story } from "./story/Story";
+import {WorldService} from "./world.service";
 
 @Component({
   selector: 'bsp-world',
@@ -10,35 +13,60 @@ import {FirebaseService} from "../services/firebase/firebase.service";
 })
 export class WorldComponent implements OnInit {
   myForm: FormGroup;
+  id: number;
   mono: any;
-  story = {
-    premis: null,
-    choice1: null,
-    choice2: null
-  }
+  // stories: Story[];
+
   dberror: string = '';
 
-  constructor(private firebaseService: FirebaseService, private router: Router) {}
+  constructor(private db: WorldService, private router: Router) {}
 
   ngOnInit() {
-    // this.myForm = new FormGroup(
-    //   {
-    //     story.premis = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
-    //     story.choice1: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
-    //     story.choice2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)])
-    //   }
-    // );
+    this.myForm = new FormGroup(
+      {
+        mono: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
+        stories: new FormArray([this.storyInit()]),
+      }
+    );
     // this.story = this.myForm.controls['mono'];
     // this.choice1 = this.myForm.controls['choice1'];
     // this.choice2 = this.myForm.controls['choice2'];
   }
 
+  storyInit() {
+    return new FormGroup({
+      title: new FormControl(''),
+      prologue: new FormControl(''),
+      choices: new FormArray([this.choiceInit()])
+    });
+  }
+
+  addStory() {
+    (<FormArray>this.myForm.controls['stories']).push(this.storyInit());
+  }
+
+  choiceInit() {
+    return new FormGroup({
+      text: new FormControl(''),
+      image: new FormControl('')
+    });
+  }
+
+  addChoice(i: number) {
+    (<FormArray>(<FormGroup>(<FormArray>this.myForm.controls['stories']).at(i)).controls['choices']).push(this.choiceInit());
+  }
+
   success() {
-    console.log('The user was signed in.');
-    this.router.navigate(['/']);
+    // console.log('The user was signed in.');
+    // this.router.navigate(['/']);
+  }
+
+  onRemoveItem(i) {
+
   }
 
   onSubmit() {
+    console.log(this.myForm);
     // const world = this.firebaseService.put('world', {this.myForm.controls['mono'].value, this.myForm.controls['story'], this.myForm.controls['choice1'].value, this.myForm.controls['choice1'].value})
     //   .then(x => {
     //     console.log('In login with success');
