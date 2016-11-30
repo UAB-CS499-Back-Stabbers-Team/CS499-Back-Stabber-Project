@@ -1,0 +1,26 @@
+<h2 xmlns:style="http://www.w3.org/1999/xhtml">
+  Roles
+</h2>
+<div class="row">
+  <label for="mainForm">Editing: {{editing}}</label>
+  <form id="mainForm" [formGroup]="mainForm" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="row">
+      <div class="col-xs-12">
+        <input type="text" class="form-control" formControlName="name" placeholder="Name" value="{{ oldItem.name }}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Save</button>
+        <a class="btn btn-danger" (click)="onCancel()">Cancel</a>
+      </div>
+    </div>
+  </form>
+  <hr>
+  <div class="row">
+    <div style="background-color: gray; border: 1px solid black;" *ngFor="let key of db.keys; let i = index">
+      <div (click)="edit(i)" style="block: inline">{{db.items[key].name}}</div>
+      <button (click)="remove(i)" style="background-color: red">X</button>
+    </div>
+  </div>
+</div>

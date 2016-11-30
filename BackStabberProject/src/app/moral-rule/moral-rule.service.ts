@@ -1,5 +1,6 @@
 import { OnInit, OnDestroy } from '@angular/core';
 import { Injectable } from '@angular/core';
+import { Observable, Subject, Subscription } from 'rxjs/Rx';
 import {DbService} from "../services/db.service";
 import {MoralRule} from "./moralRule";
 // import {FirebaseService} from "../services/firebase/firebase.service";
@@ -17,13 +18,11 @@ export class MoralRuleService implements OnInit, OnDestroy {
   // constructor(private db: DbService) {}
 
   ngOnInit() {
-    this.getAll(s => this.process(s));
+    // this.getAll(s => this.process(s));
   }
 
-  ngOnDestroy() {}
-
-  public test() {
-    this.mr.child('tester1').set({name: 'Tester1'});
+  ngOnDestroy() {
+    this.ref.off();
   }
 
   public keyExists(key: string) {
@@ -32,10 +31,6 @@ export class MoralRuleService implements OnInit, OnDestroy {
 
   public getChildRef(path: any) {
     return this.ref.child(path);
-  }
-
-  public get(name: string) {
-    return 'test';
   }
 
   public getAll(func: any) {

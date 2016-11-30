@@ -34,6 +34,7 @@ var moral_rule_component_1 = require("./moral-rule/moral-rule.component");
 var world_list_component_1 = require("./world/world-list/world-list.component");
 var world_edit_component_1 = require("./world/world-edit/world-edit.component");
 var world_detail_component_1 = require("./world/world-detail/world-detail.component");
+var roles_component_1 = require("./user/roles/roles.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -47,6 +48,7 @@ var AppModule = (function () {
                 about_component_1.AboutComponent,
                 dropdown_directive_1.DropdownDirective,
                 user_component_1.UserComponent,
+                roles_component_1.RolesComponent,
                 user_profile_component_1.UserProfileComponent,
                 user_profile_edit_component_1.UserProfileEditComponent,
                 user_account_component_1.UserAccountComponent,
@@ -62,7 +64,7 @@ var AppModule = (function () {
                 world_detail_component_1.WorldDetailComponent,
                 story_component_1.StoryComponent,
                 choice_component_1.ChoiceComponent,
-                moral_rule_component_1.MoralRuleComponent
+                moral_rule_component_1.MoralRuleComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

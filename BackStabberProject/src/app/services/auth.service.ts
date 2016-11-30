@@ -12,7 +12,8 @@ export class AuthService {
   authUser: UserAuth;
   authSub: Subscription;
 
-  constructor(private dbService: DbService, private messageService: MessageService, private router: Router) {
+  constructor(private dbService: DbService,
+              private messageService: MessageService, private router: Router) {
     this.authUser = new UserAuth();
   }
 

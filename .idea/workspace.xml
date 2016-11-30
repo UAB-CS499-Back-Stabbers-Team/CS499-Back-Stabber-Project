@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08120333-c724-4f57-8bbd-a7a5c3ef9223" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moralRule.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/World.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/Story.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/Choice.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.service.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-detail/world-detail.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-detail/world-detail.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-detail/world-detail.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-detail/world-detail.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-detail/world-detail.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-detail/world-detail.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-edit/world-edit.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-edit/world-edit.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-edit/world-edit.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-edit/world-edit.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-edit/world-edit.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-edit/world-edit.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-list/world-list.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-list/world-list.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-list/world-list.component.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world-list/world-list.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.routes.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.service.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/role.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/app.module.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/app.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/app.module.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/app.module.js.map" />
@@ -43,28 +16,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.html" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/choice/choice.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.html" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.html" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/index.html" afterPath="$PROJECT_DIR$/BackStabberProject/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.js.map" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts" afterPath="$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts" />
     </list>
     <ignored path="CS499-Back-Stabber-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,11 +43,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="moral-rule.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.html">
+      <file leaf-file-name="moral-rule.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state relative-caret-position="462">
+              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moral-rule.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="69" column="6" selection-start-line="66" selection-start-column="3" selection-end-line="69" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roles.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="88" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -101,45 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts">
+      <file leaf-file-name="roles.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.routing.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nav.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moral-rule.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+            <state relative-caret-position="763">
+              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -147,35 +105,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.ts">
+      <file leaf-file-name="role.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/role.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="154">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="moralRule.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moralRule.ts">
+      <file leaf-file-name="roles.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="836">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <element signature="n#!!doc;n#MoralRule#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="firebase.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-704">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,10 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/firebase.service.ts" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.css" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.html" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/header/header.component.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/services/auth/auth.service.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/message/message.service.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login-signup.component.ts" />
@@ -218,8 +160,6 @@
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/user.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/services/userAuth.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/user.service.ts" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/database.rules.json" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/login-signup/login/login.component.html" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/story/story.component.ts" />
@@ -234,7 +174,6 @@
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/story/Story.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/story/story.service.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.html" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/world.routes.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moralRule.ts" />
@@ -242,11 +181,18 @@
         <option value="$PROJECT_DIR$/BackStabberProject/src/index.html" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.ts" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/world/world.component.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.html" />
         <option value="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.ts" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts" />
-        <option value="$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/role.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.html" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.service.ts" />
+        <option value="$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.ts" />
       </list>
     </option>
   </component>
@@ -260,9 +206,9 @@
     <handled-path value="$PROJECT_DIR$/BackStabberProject/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1015" />
+    <option name="x" value="487" />
     <option name="y" value="23" />
-    <option name="width" value="1543" />
+    <option name="width" value="1681" />
     <option name="height" value="1349" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -337,6 +283,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -500,7 +468,171 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="firebase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="moral-rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login-signup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS499-Back-Stabber-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackStabberProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,6 +720,7 @@
       <recent name="$PROJECT_DIR$/BackStabberProject/src/app/about" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BackStabberProject/src/app/user/roles" />
       <recent name="$PROJECT_DIR$/BackStabberProject/src/app/shared" />
     </key>
   </component>
@@ -683,7 +816,7 @@
       <workItem from="1477756127527" duration="1137000" />
       <workItem from="1478178260955" duration="529000" />
       <workItem from="1478785869053" duration="217000" />
-      <workItem from="1480083455263" duration="79722000" />
+      <workItem from="1480083455263" duration="101467000" />
     </task>
     <task id="LOCAL-00001" summary="Added a Stories folder.">
       <created>1475093241484</created>
@@ -720,24 +853,31 @@
       <option name="project" value="LOCAL" />
       <updated>1477320026385</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added moral-rules form and modules">
+      <created>1480342279476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1480342279476</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213416000" />
+    <option name="totallyTimeSpent" value="235161000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1015" y="23" width="1543" height="1349" extended-state="0" />
-    <editor active="false" />
+    <frame x="487" y="23" width="1681" height="1349" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13714734" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18199737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14759035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16653128" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25426483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08773355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09504468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18377976" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -785,7 +925,8 @@
     <MESSAGE value="Modified DB services to use Observers for firebase" />
     <MESSAGE value="Added world components, unfinished with errors" />
     <MESSAGE value="Commented out code so no errors are produced when running" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented out code so no errors are produced when running" />
+    <MESSAGE value="Added moral-rules form and modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added moral-rules form and modules" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -794,30 +935,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/dist/main.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="3178" column="23" selection-start-line="3178" selection-start-column="23" selection-end-line="3178" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/node_modules/@angular/core/src/application_init.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.css" />
     <entry file="file://$PROJECT_DIR$/Stories/Bio's stories">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -837,13 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/firebase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -888,16 +998,6 @@
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/user.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1053,14 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/user.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1073,14 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1120,14 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moralRule.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1138,32 +1214,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/db.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/firebase/firebase.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="418">
+          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/firebase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/user.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="8" column="106" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+        <state relative-caret-position="462">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -1172,38 +1326,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/moral-rule/moral-rule.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        <state relative-caret-position="462">
+          <caret line="69" column="6" selection-start-line="66" selection-start-column="3" selection-end-line="69" selection-end-column="6" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/app.routing.ts">
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/role.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="154">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.ts">
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="440">
+          <caret line="20" column="88" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
           <folding>
-            <element signature="e#0#76#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/header/nav/nav.component.html">
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="836">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackStabberProject/src/app/user/roles/roles.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>

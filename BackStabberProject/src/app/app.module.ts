@@ -28,6 +28,7 @@ import {MoralRuleComponent} from "./moral-rule/moral-rule.component";
 import {WorldListComponent} from "./world/world-list/world-list.component";
 import {WorldEditComponent} from "./world/world-edit/world-edit.component";
 import {WorldDetailComponent} from "./world/world-detail/world-detail.component";
+import {RolesComponent} from "./user/roles/roles.component";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {WorldDetailComponent} from "./world/world-detail/world-detail.component"
     AboutComponent,
     DropdownDirective,
     UserComponent,
+    RolesComponent,
     UserProfileComponent,
     UserProfileEditComponent,
     UserAccountComponent,
@@ -53,7 +55,7 @@ import {WorldDetailComponent} from "./world/world-detail/world-detail.component"
     WorldDetailComponent,
     StoryComponent,
     ChoiceComponent,
-    MoralRuleComponent
+    MoralRuleComponent,
   ],
   imports: [
     BrowserModule,

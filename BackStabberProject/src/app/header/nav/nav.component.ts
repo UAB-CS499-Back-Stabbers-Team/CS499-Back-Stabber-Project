@@ -44,5 +44,4 @@ export class NavComponent implements OnDestroy, OnInit, AfterViewInit {
   ngOnDestroy() {
     this.authSub.unsubscribe();
   }
-
 }
