@@ -1,23 +1,26 @@
 import { OnInit, OnDestroy } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Role } from "./role";
-declare var firebase: any;
+import { DbService } from "../../services/db.service";
+// declare var firebase: any;
 
 @Injectable()
 export class RolesService implements OnDestroy {
-  public db = firebase.database();
+  // public db = firebase.database();
   public dbpath = 'roles';
-  public ref = this.db.ref();
-  public cr = this.ref.child(this.dbpath);
+  // public ref: any; // = this.db.ref();
+  public cr: any; // = this.ref.child(this.dbpath);
   public keys = [];
   public items = {};
 
-  constructor() {
-    this.cr.on('value', snapShot => this.process(snapShot));
+  constructor(private db: DbService) {
+    // this.ref = this.db.getRef();
+    this.cr = this.db.getChildRef(this.dbpath);
+    this.getAll(snapShot => this.process(snapShot));
   }
 
   ngOnDestroy() {
-    this.ref.off();
+    this.cr.off();
   }
 
   public getItemByIndex(i: number) {
@@ -28,9 +31,9 @@ export class RolesService implements OnDestroy {
     return this.cr.once('value').exists(key);
   }
 
-  public getChildRef(path: any) {
-    return this.ref.child(path);
-  }
+  // public getChildRef(path: any) {
+  //   return this.db.getChildRef(path);
+  // }
 
   public getAll(func: any) {
     return this.cr.on('value', func);

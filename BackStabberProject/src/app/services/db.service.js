@@ -11,6 +11,9 @@ var DbService = (function () {
         this.db = db;
         this.messageService = messageService;
     }
+    DbService.prototype.getRef = function () {
+        return this.db.getRef();
+    };
     DbService.prototype.getChildRef = function (child) {
         return this.db.getChildRef(child);
     };

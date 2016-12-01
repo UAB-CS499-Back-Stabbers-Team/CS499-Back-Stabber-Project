@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { FirebaseService } from "../services/firebase/firebase.service";
-import {MessageService} from "../message/message.service";
+import { MessageService } from "../message/message.service";
 import {User} from "../user/user";
 
 @Injectable()
 export class DbService {
 
   constructor(private db: FirebaseService, private messageService: MessageService) {  }
+
+  public getRef() {
+    return this.db.getRef();
+  }
 
   public getChildRef(child: string) {
     return this.db.getChildRef(child);

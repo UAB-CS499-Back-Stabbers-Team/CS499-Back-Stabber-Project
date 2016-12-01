@@ -15,18 +15,7 @@ export class FirebaseService {
     providerId: null
   };
 
-  constructor() {
-    // this.db.ref().child('objects').on('value', snap => console.log(snap.val()));
-  }
-
-  public getChildRef(child: string) {
-    // console.log('firebase');
-    const ref = this.db.ref().child(child);
-    // ref.on('value', snap => console.log(snap.val()));
-    // console.log(ref);
-    // ref.on('child_added', snap => console.log(snap.val()))
-    return ref;
-  }
+  constructor() {}
 
   signinUser(email, pass) {
     return this.auth.signInWithEmailAndPassword(email, pass);
@@ -73,23 +62,27 @@ export class FirebaseService {
     return this.db.ref();
   }
 
-  getAll(path: string) {
-    let ar = path.split('/');
-    const ref = this.db.ref().child(ar[0]);
+  public getChildRef(child: string) {
+    return this.getRef().child(child);
   }
 
-  get(key: string) {
-    // this.db.ref('objects').set({toast: 'whole grain'});
-    const dbRefObject = this.db.ref().child('objects'); // create the object reference
-    dbRefObject.on('value', snap => console.log(snap.val())); // value is the event type that will sync the data realtime
-    // console.log(ref);
+  // getAll(path: string) {
+  //   let ar = path.split('/');
+  //   const ref = this.getRef().child(ar[0]);
+  // }
 
-    // list
-    const dbRefList = dbRefObject.child('hobbies');
-    dbRefList.on('child_added', snap => console.log(snap.val()));
-  }
+  // get(key: string) {
+  //   // this.db.ref('objects').set({toast: 'whole grain'});
+  //   const dbRefObject = this.db.ref().child('objects'); // create the object reference
+  //   dbRefObject.on('value', snap => console.log(snap.val())); // value is the event type that will sync the data realtime
+  //   // console.log(ref);
+  //
+  //   // list
+  //   const dbRefList = dbRefObject.child('hobbies');
+  //   dbRefList.on('child_added', snap => console.log(snap.val()));
+  // }
 
   put(path, data) {
-    this.db.ref(path).set(data);
+    this.getChildRef(path).set(data);
   }
 }

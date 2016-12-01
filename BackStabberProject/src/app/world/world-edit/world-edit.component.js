@@ -10,6 +10,19 @@ var WorldEditComponent = (function () {
     function WorldEditComponent() {
     }
     WorldEditComponent.prototype.ngOnInit = function () {
+        // this.subscription = this.route.params.subscribe(
+        //   (params: any) => {
+        //     if(params.hasOwnProperty('id')) {
+        //       this.isNew = false;
+        //       this.index = +params['id'];
+        //       this.oldItem = this.recipeService.getRecipe(this.recipeIndex);
+        //     } else {
+        //       this.isNew = true;
+        //       this.recipe = null;
+        //     }
+        //     this.initForm();
+        //   }
+        // );
     };
     WorldEditComponent = __decorate([
         core_1.Component({
