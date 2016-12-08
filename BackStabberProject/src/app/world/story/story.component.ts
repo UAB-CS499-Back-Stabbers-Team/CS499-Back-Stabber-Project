@@ -34,12 +34,12 @@ export class StoryComponent implements OnInit {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         if (params.hasOwnProperty('worldIndex')) {
-          this.world = this.db.getItemByIndex(this.index);
+          this.worldIndex = +params['worldIndex'];
+          this.world = this.db.getItemByIndex(this.worldIndex);
 
           if (params.hasOwnProperty('storyIndex')) {
             console.log('in params');
             this.isNew = false;
-            this.worldIndex = +params['worldIndex'];
             this.storyIndex = +params['storyIndex'];
             this.item = this.world.stories[this.storyIndex];
             if(this.world != null) {

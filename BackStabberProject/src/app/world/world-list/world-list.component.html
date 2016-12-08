@@ -1,10 +1,11 @@
-<p>
-  world-list works!
-</p>
+<h3>
+  List of Worlds
+</h3>
 <div>
-<div class="item" *ngFor="let x of db.keys; let i = index;" (click)="choice(i)">
-  <div>{{db.items[x].name}}</div>
-  <button class="deleteButton" (click)="edit(i)">Edit</button>
-  <button class="deleteButton" (click)="remove(i)">Delete</button>
-</div>
+  <div class="item" *ngFor="let x of db.keys; let i = index;" (click)="choice(i)">
+    <div>{{db.items[x].name}}</div>
+    <button class="deleteButton" (click)="edit(i)">Edit</button>
+    <button class="deleteButton" (click)="remove(i)">Delete</button>
+  </div>
+  <button type="button" class="btn btn-lg btn-default" (click)="newWorld()">New World</button>
 </div>

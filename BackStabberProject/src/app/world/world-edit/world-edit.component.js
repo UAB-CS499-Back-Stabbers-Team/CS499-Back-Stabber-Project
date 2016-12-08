@@ -91,6 +91,9 @@ var WorldEditComponent = (function () {
     WorldEditComponent.prototype.onCancel = function () {
         this.router.navigate(['../world']);
     };
+    WorldEditComponent.prototype.addStory = function () {
+        this.router.navigate(['../world/' + this.index + '/new']);
+    };
     WorldEditComponent = __decorate([
         core_1.Component({
             selector: 'bsp-world-edit',

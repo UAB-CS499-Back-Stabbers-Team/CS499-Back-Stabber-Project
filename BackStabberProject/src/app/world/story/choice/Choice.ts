@@ -1,4 +1,4 @@
-import {MoralRule} from "../../../moral-rule/moralRule";
+import { MoralRule } from "../../../moral-rule/moralRule";
 /**
  * Created by cwcordell on 10/24/16.
  */

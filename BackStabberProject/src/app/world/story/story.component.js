@@ -22,11 +22,11 @@ var StoryComponent = (function () {
         var _this = this;
         this.subscription = this.route.params.subscribe(function (params) {
             if (params.hasOwnProperty('worldIndex')) {
-                _this.world = _this.db.getItemByIndex(_this.index);
+                _this.worldIndex = +params['worldIndex'];
+                _this.world = _this.db.getItemByIndex(_this.worldIndex);
                 if (params.hasOwnProperty('storyIndex')) {
                     console.log('in params');
                     _this.isNew = false;
-                    _this.worldIndex = +params['worldIndex'];
                     _this.storyIndex = +params['storyIndex'];
                     _this.item = _this.world.stories[_this.storyIndex];
                     if (_this.world != null) {

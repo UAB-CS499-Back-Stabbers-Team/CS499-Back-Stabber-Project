@@ -22,6 +22,9 @@ var WorldListComponent = (function () {
     WorldListComponent.prototype.edit = function (i) {
         this.router.navigate(['world/' + i + '/edit']);
     };
+    WorldListComponent.prototype.newWorld = function (i) {
+        this.router.navigate(['world/new']);
+    };
     WorldListComponent = __decorate([
         core_1.Component({
             selector: 'bsp-world-list',

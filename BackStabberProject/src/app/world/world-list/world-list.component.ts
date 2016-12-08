@@ -24,4 +24,8 @@ export class WorldListComponent {
   edit(i: number) {
     this.router.navigate(['world/' + i + '/edit']);
   }
+
+  newWorld(i: number) {
+    this.router.navigate(['world/new']);
+  }
 }

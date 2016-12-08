@@ -105,6 +105,10 @@ export class WorldEditComponent implements OnInit, OnChanges {
     this.router.navigate(['../world']);
   }
 
+  addStory() {
+    this.router.navigate(['../world/'+this.index+'/new'])
+  }
+
   // imageUpdate() {
   //   alert(this.mainForm.value.imageURL);
   //   console.log(this.path + '/' + this.mainForm.value.imageURL);
