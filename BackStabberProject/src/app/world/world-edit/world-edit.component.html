@@ -62,6 +62,6 @@
         </div>
       </div>
     </form>
-    <button type="button" class="btn btn-lg btn-default" (click)="addStory()">Add a Story</button>
+    <button *ngIf="index" type="button" class="btn btn-lg btn-default" (click)="addStory()">Add a Story</button>
   </div>
 </div>

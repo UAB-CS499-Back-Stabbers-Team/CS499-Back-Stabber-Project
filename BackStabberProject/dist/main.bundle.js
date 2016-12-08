@@ -8383,6 +8383,7 @@ function visitAll(visitor, nodes, context) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__src_forms__["e"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__src_forms__["f"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "g", function() { return __WEBPACK_IMPORTED_MODULE_0__src_forms__["g"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__src_forms__["h"]; });
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -47711,28 +47712,16 @@ var StoryComponent = (function () {
         this.choices = [];
         this.valid = false;
     }
-    // ngOnInit() {
-    //   this.myForm = new FormGroup(
-    //     {
-    //       seq: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(2)]),
-    //       mono: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(516)]),
-    //       choices: new FormArray([new ChoiceComponent().formGroup()]) //new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]),
-    //     }
-    //   );
-    //   this.mono = this.myForm.controls['mono'];
-    //   this.choice[0] = this.myForm.controls['choice'];
-    //   this.choice[1] = this.myForm.controls['choice2'];
-    // }
     StoryComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.subscription = this.route.params.subscribe(function (params) {
             if (params.hasOwnProperty('worldIndex')) {
-                _this.world = _this.db.getItemByIndex(_this.index);
+                _this.worldIndex = +params['worldIndex'];
+                _this.world = _this.db.getItemByIndex(_this.worldIndex);
                 if (params.hasOwnProperty('storyIndex')) {
                     console.log('in params');
                     _this.isNew = false;
-                    _this.index = +params['worldIndex'];
-                    _this.storyIndex = params['storyIndex'];
+                    _this.storyIndex = +params['storyIndex'];
                     _this.item = _this.world.stories[_this.storyIndex];
                     if (_this.world != null) {
                         if (_this.item) {
@@ -47744,6 +47733,7 @@ var StoryComponent = (function () {
                     }
                     else {
                         _this.ms.error('The item does not exist with the given ID');
+                        _this.navigateBack();
                     }
                 }
                 else {
@@ -47767,22 +47757,25 @@ var StoryComponent = (function () {
         return new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', []);
     };
     StoryComponent.prototype.initForm = function () {
-        // let name = '';
-        // let imageUrl = '';
-        // let prologue = '';
-        //
-        // if (!this.isNew) {
-        //   name = this.item.name;
-        //   imageUrl = this.item.imageURL;
-        //   prologue = this.item.prologue;
-        // }
-        //
-        // this.mainForm = this.formBuilder.group({
-        //   name: [name, Validators.required],
-        //   prologue: [prologue, Validators.required],
-        //   imagePath: [imageUrl, Validators.required]
-        // });
-        // console.log(this.mainForm);
+        var choicesArray = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* FormArray */]([]);
+        for (var i = 0; i < this.item.choices.length; i++) {
+            choicesArray.push(new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormGroup */]({
+                text: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](this.item.choices[i].text, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].minLength(8), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].maxLength(32)]),
+                moralRule: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](this.item.choices[i].moralRule),
+            }));
+        }
+        this.mainForm = this.formBuilder.group({
+            title: [this.item.title, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required],
+            prologue: [this.item.prologue, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required],
+            choices: choicesArray
+        });
+        console.log(this.mainForm);
+    };
+    StoryComponent.prototype.navigateBack = function () {
+        this.router.navigate(['../']);
+    };
+    StoryComponent.prototype.onCancel = function () {
+        this.router.navigate(['../world']);
     };
     StoryComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
@@ -47971,7 +47964,10 @@ var WorldEditComponent = (function () {
         this.router.navigate(['../']);
     };
     WorldEditComponent.prototype.onCancel = function () {
-        this.navigateBack();
+        this.router.navigate(['../world']);
+    };
+    WorldEditComponent.prototype.addStory = function () {
+        this.router.navigate(['../world/' + this.index + '/new']);
     };
     WorldEditComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
@@ -48023,7 +48019,10 @@ var WorldListComponent = (function () {
             this.db.remove(i);
     };
     WorldListComponent.prototype.edit = function (i) {
-        this.router.navigate(['../world/' + i + '/edit']);
+        this.router.navigate(['world/' + i + '/edit']);
+    };
+    WorldListComponent.prototype.newWorld = function (i) {
+        this.router.navigate(['world/new']);
     };
     WorldListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
@@ -61219,14 +61218,14 @@ var ReactiveFormsModule = (function () {
 /* unused harmony reexport RequiredValidator */
 /* harmony reexport (binding) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_18__form_builder__["a"]; });
 /* unused harmony reexport AbstractControl */
-/* unused harmony reexport FormArray */
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_19__model__["c"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_19__model__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_19__model__["a"]; });
 /* unused harmony reexport NG_ASYNC_VALIDATORS */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_20__validators__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_20__validators__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_20__validators__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_21__form_providers__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "g", function() { return __WEBPACK_IMPORTED_MODULE_21__form_providers__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "g", function() { return __WEBPACK_IMPORTED_MODULE_21__form_providers__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "h", function() { return __WEBPACK_IMPORTED_MODULE_21__form_providers__["b"]; });
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -64043,10 +64042,10 @@ var AppModule = (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["b" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* FormsModule */],
                 // CustomFormsModule,
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__app_routing__["a" /* routing */]
             ],
             providers: [],
@@ -64589,7 +64588,7 @@ var EqualValidator = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Directive */])({
             selector: '[validateEqual][formControlName],[validateEqual][formControl],[validateEqual][ngModel]',
             providers: [
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* NG_VALIDATORS */], useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_32" /* forwardRef */])(function () { return EqualValidator; }), multi: true }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALIDATORS */], useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_32" /* forwardRef */])(function () { return EqualValidator; }), multi: true }
             ]
         }),
         __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Attribute */])('validateEqual')),
@@ -64908,10 +64907,10 @@ var ChoiceComponent = (function () {
 
 var WORLD_ROUTES = [
     { path: 'new', component: __WEBPACK_IMPORTED_MODULE_2__world_edit_world_edit_component__["a" /* WorldEditComponent */], pathMatch: 'full' },
-    { path: ':id/edit', component: __WEBPACK_IMPORTED_MODULE_2__world_edit_world_edit_component__["a" /* WorldEditComponent */] },
     { path: ':id', component: __WEBPACK_IMPORTED_MODULE_1__world_detail_world_detail_component__["a" /* WorldDetailComponent */] },
-    { path: ':worldIndex/:storyIndex', component: __WEBPACK_IMPORTED_MODULE_3__story_story_component__["a" /* StoryComponent */] },
+    { path: ':id/edit', component: __WEBPACK_IMPORTED_MODULE_2__world_edit_world_edit_component__["a" /* WorldEditComponent */] },
     { path: ':worldIndex/new', component: __WEBPACK_IMPORTED_MODULE_3__story_story_component__["a" /* StoryComponent */] },
+    { path: ':worldIndex/:storyIndex', component: __WEBPACK_IMPORTED_MODULE_3__story_story_component__["a" /* StoryComponent */] },
     // {path: ':worldIndex/:worldIndex/:storyId', component: StoryComponent},
     { path: '', component: __WEBPACK_IMPORTED_MODULE_0__world_list_world_list_component__["a" /* WorldListComponent */], pathMatch: 'full' }
 ];
@@ -68211,7 +68210,7 @@ module.exports = "<!--<form class=\"form-group\" (ngSubmit)=\"onSubmit()\" [form
 /* 747 */
 /***/ function(module, exports) {
 
-module.exports = "<h2>\n  Story\n</h2>\n<!--<div *ngIf=\"dberror\" class=\"alert alert-danger\">{{dberror}}</div>-->\n<!--<form class=\"form-group\" (ngSubmit)=\"onSubmit()\" [formGroup]=\"myForm\">-->\n  <!--<div>-->\n    <!--<div class=\"input input-group-lg\">-->\n      <!--<textarea type=\"textarea\" class=\"form-control\" id=\"story\" name=\"story\" placeholder=\"Story\" [(ngModel)]=\"story\" formControlName=\"story\"></textarea>-->\n    <!--</div>-->\n\n    <!--<div class=\"input input-group-lg\">-->\n      <!--<textarea class=\"form-control no-errors\" id=\"choice1\" name=\"choice1\" placeholder=\"Choice One\" [(ngModel)]=\"choice1\" formControlName=\"choice1\"></textarea>-->\n    <!--</div>-->\n\n    <!--<div class=\"input input-group-lg\">-->\n      <!--<textarea class=\"form-control no-errors\" id=\"choice2\" name=\"choice2\" placeholder=\"Choice Two\" [(ngModel)]=\"choice2\" formControlName=\"choice2\"></textarea>-->\n    <!--</div>-->\n\n  <!--</div>-->\n  <!--<button type=\"submit\" class=\"btn btn-lg btn-default\">Login</button>-->\n  <!--<button type=\"submit\" class=\"btn btn-lg btn-default\" [disabled]=\"!myForm.valid\">Login</button>-->\n  <!--Errors: {{myForm.controls.['email'].errors.minlength}}-->\n  <!--<div *ngFor=\"let er of myForm.controls['email'].errors\">{{er}}</div>-->\n<!--</form>-->\n\n<!--<p *ngIf=\"!isNew\">-->\n  <!--Edit World-->\n<!--</p>-->\n<!--<p *ngIf=\"isNew\">-->\n  <!--Create New World-->\n<!--</p>-->\n<!--<div class=\"row\">-->\n  <!--<div class=\"col-xs-12\">-->\n    <!--<form [formGroup]=\"mainForm\" (ngSubmit)=\"onSubmit()\">-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"form-group\">-->\n            <!--<input-->\n              <!--type=\"text\"-->\n              <!--id=\"name\"-->\n              <!--class=\"form-control\"-->\n              <!--formControlName=\"name\"-->\n              <!--placeholder=\"World Name\">-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"form-group\">-->\n            <!--<input-->\n              <!--type=\"text\"-->\n              <!--id=\"image-url\"-->\n              <!--class=\"form-control\"-->\n              <!--formContolName=\"imageUrl\"-->\n              <!--placeholder=\"World Image URL\"-->\n              <!--#imageUrl>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"img\">-->\n            <!--<img [src]=\"imageUrl.value\">-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"form-group\">-->\n            <!--<textarea-->\n              <!--type=\"text\"-->\n              <!--id=\"prologue\"-->\n              <!--rows=\"6\"-->\n              <!--class=\"form-control\"-->\n              <!--formControlName=\"prologue\"-->\n              <!--placeholder=\"World Prologue\"></textarea>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<h4>World Stories</h4>-->\n      <!--<div class=\"row\" style=\"background-color: grey;\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<ul class=\"list-group\" formArrayName=\"stories\">-->\n            <!--<div class=\"row\" *ngFor=\"let story of mainForm.controls['stories'].controls; let i = index\">-->\n              <!--<div formGroupName=\"{{i}}\">-->\n                <!--<div class=\"col-sm-5\">-->\n                  <!--<input-->\n                    <!--type=\"text\"-->\n                    <!--class=\"form-control\"-->\n                    <!--formControlName=\"storyTitle\"-->\n                    <!--placeholder=\"Story Title\">-->\n                <!--</div>-->\n                <!--<div class=\"col-sm-5\">-->\n                  <!--<input-->\n                    <!--type=\"text\"-->\n                    <!--class=\"form-control\"-->\n                    <!--formControlName=\"storyPrologue\"-->\n                    <!--placeholder=\"Story Prologue\">-->\n                <!--</div>-->\n                <!--<div class=\"col-sm-2\">-->\n                  <!--<button class=\"btn btn-danger\" (click)=\"onRemoveStory(i)\">X</button>-->\n                <!--</div>-->\n                <!--<h4>World Story Choices</h4>-->\n                <!--<div class=\"row\" style=\"background-color: green;\">-->\n                  <!--<div class=\"col-xs-12\">-->\n                    <!--<ul class=\"list-group\" formArrayName=\"storyChoices\">-->\n                      <!--<div class=\"row\" *ngFor=\"let choice of story.controls['storyChoices']; let j = index\">-->\n                        <!--<div formGroupName=\"{{j}}\">-->\n                          <!--<div class=\"col-sm-5\">-->\n                            <!--<input-->\n                              <!--type=\"text\"-->\n                              <!--class=\"form-control\"-->\n                              <!--formControlName=\"choiceText\"-->\n                              <!--placeholder=\"Choice Text\">-->\n                          <!--</div>-->\n                          <!--<div class=\"col-sm-5\">-->\n                            <!--<input-->\n                              <!--type=\"text\"-->\n                              <!--class=\"form-control\"-->\n                              <!--formControlName=\"choiceImageUrl\"-->\n                              <!--placeholder=\"Choice Image URL\">-->\n                          <!--</div>-->\n                          <!--<div class=\"col-sm-5\">-->\n                            <!--<input-->\n                              <!--type=\"text\"-->\n                              <!--class=\"form-control\"-->\n                              <!--formControlName=\"moralRule\"-->\n                              <!--placeholder=\"Moral Rule\">-->\n                          <!--</div>-->\n                          <!--<div class=\"col-sm-2\">-->\n                            <!--<button class=\"btn btn-danger\" (click)=\"onRemoveChoice(i,j)\">X</button>-->\n                          <!--</div>-->\n                        <!--</div>-->\n                      <!--</div>-->\n                    <!--</ul>-->\n                  <!--</div>-->\n                <!--</div>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</ul>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<button type=\"submit\" class=\"btn btn-success\" [disabled]=\"![valid]\">Save</button>-->\n          <!--<a class=\"btn btn-danger\" (click)=\"onCancel()\">Cancel</a>-->\n        <!--</div>-->\n      <!--</div>-->\n    <!--</form>-->\n  <!--</div>-->\n<!--</div>-->\n"
+module.exports = "<h2>\n  Story\n</h2>\n<div *ngIf=\"dberror\" class=\"alert alert-danger\">{{dberror}}</div>\n<form class=\"form-group\" (ngSubmit)=\"onSubmit()\" [formGroup]=\"mainForm\">\n  <div>\n    <div class=\"input input-group-lg\">\n      <textarea type=\"textarea\" class=\"form-control\" id=\"title\" name=\"title\" placeholder=\"Title\" [(ngModel)]=\"title\" formControlName=\"title\"></textarea>\n    </div>\n\n    <div class=\"input input-group-lg\">\n      <textarea class=\"form-control no-errors\" id=\"prologue\" name=\"prologue\" placeholder=\"Prologue\" [(ngModel)]=\"prologue\" formControlName=\"prologue\"></textarea>\n    </div>\n\n  </div>\n  <div class=\"col-xs-12\">\n    <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!mainForm.valid\">Save</button>\n    <a class=\"btn btn-danger\" (click)=\"onCancel()\">Cancel</a>\n  </div>\n  <!--<div *ngFor=\"let er of myForm.controls['email'].errors\">{{er}}</div>-->\n</form>\n\n<!--<p *ngIf=\"!isNew\">-->\n  <!--Edit World-->\n<!--</p>-->\n<!--<p *ngIf=\"isNew\">-->\n  <!--Create New World-->\n<!--</p>-->\n<!--<div class=\"row\">-->\n  <!--<div class=\"col-xs-12\">-->\n    <!--<form [formGroup]=\"mainForm\" (ngSubmit)=\"onSubmit()\">-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"form-group\">-->\n            <!--<input-->\n              <!--type=\"text\"-->\n              <!--id=\"name\"-->\n              <!--class=\"form-control\"-->\n              <!--formControlName=\"name\"-->\n              <!--placeholder=\"World Name\">-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"form-group\">-->\n            <!--<input-->\n              <!--type=\"text\"-->\n              <!--id=\"image-url\"-->\n              <!--class=\"form-control\"-->\n              <!--formContolName=\"imageUrl\"-->\n              <!--placeholder=\"World Image URL\"-->\n              <!--#imageUrl>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"img\">-->\n            <!--<img [src]=\"imageUrl.value\">-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<div class=\"form-group\">-->\n            <!--<textarea-->\n              <!--type=\"text\"-->\n              <!--id=\"prologue\"-->\n              <!--rows=\"6\"-->\n              <!--class=\"form-control\"-->\n              <!--formControlName=\"prologue\"-->\n              <!--placeholder=\"World Prologue\"></textarea>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<h4>World Stories</h4>-->\n      <!--<div class=\"row\" style=\"background-color: grey;\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<ul class=\"list-group\" formArrayName=\"stories\">-->\n            <!--<div class=\"row\" *ngFor=\"let story of mainForm.controls['stories'].controls; let i = index\">-->\n              <!--<div formGroupName=\"{{i}}\">-->\n                <!--<div class=\"col-sm-5\">-->\n                  <!--<input-->\n                    <!--type=\"text\"-->\n                    <!--class=\"form-control\"-->\n                    <!--formControlName=\"storyTitle\"-->\n                    <!--placeholder=\"Story Title\">-->\n                <!--</div>-->\n                <!--<div class=\"col-sm-5\">-->\n                  <!--<input-->\n                    <!--type=\"text\"-->\n                    <!--class=\"form-control\"-->\n                    <!--formControlName=\"storyPrologue\"-->\n                    <!--placeholder=\"Story Prologue\">-->\n                <!--</div>-->\n                <!--<div class=\"col-sm-2\">-->\n                  <!--<button class=\"btn btn-danger\" (click)=\"onRemoveStory(i)\">X</button>-->\n                <!--</div>-->\n                <!--<h4>World Story Choices</h4>-->\n                <!--<div class=\"row\" style=\"background-color: green;\">-->\n                  <!--<div class=\"col-xs-12\">-->\n                    <!--<ul class=\"list-group\" formArrayName=\"storyChoices\">-->\n                      <!--<div class=\"row\" *ngFor=\"let choice of story.controls['storyChoices']; let j = index\">-->\n                        <!--<div formGroupName=\"{{j}}\">-->\n                          <!--<div class=\"col-sm-5\">-->\n                            <!--<input-->\n                              <!--type=\"text\"-->\n                              <!--class=\"form-control\"-->\n                              <!--formControlName=\"choiceText\"-->\n                              <!--placeholder=\"Choice Text\">-->\n                          <!--</div>-->\n                          <!--<div class=\"col-sm-5\">-->\n                            <!--<input-->\n                              <!--type=\"text\"-->\n                              <!--class=\"form-control\"-->\n                              <!--formControlName=\"choiceImageUrl\"-->\n                              <!--placeholder=\"Choice Image URL\">-->\n                          <!--</div>-->\n                          <!--<div class=\"col-sm-5\">-->\n                            <!--<input-->\n                              <!--type=\"text\"-->\n                              <!--class=\"form-control\"-->\n                              <!--formControlName=\"moralRule\"-->\n                              <!--placeholder=\"Moral Rule\">-->\n                          <!--</div>-->\n                          <!--<div class=\"col-sm-2\">-->\n                            <!--<button class=\"btn btn-danger\" (click)=\"onRemoveChoice(i,j)\">X</button>-->\n                          <!--</div>-->\n                        <!--</div>-->\n                      <!--</div>-->\n                    <!--</ul>-->\n                  <!--</div>-->\n                <!--</div>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</ul>-->\n        <!--</div>-->\n      <!--</div>-->\n      <!--<div class=\"row\">-->\n        <!--<div class=\"col-xs-12\">-->\n          <!--<button type=\"submit\" class=\"btn btn-success\" [disabled]=\"![valid]\">Save</button>-->\n          <!--<a class=\"btn btn-danger\" (click)=\"onCancel()\">Cancel</a>-->\n        <!--</div>-->\n      <!--</div>-->\n    <!--</form>-->\n  <!--</div>-->\n<!--</div>-->\n"
 
 /***/ },
 /* 748 */
@@ -68223,13 +68222,13 @@ module.exports = "<p>\n  Detail\n</p>\n<div *ngIf=\"item != null\">\n  <div>{{it
 /* 749 */
 /***/ function(module, exports) {
 
-module.exports = "<p *ngIf=\"!isNew\">\n  Edit World\n</p>\n<p *ngIf=\"isNew\">\n  Create New World\n</p>\n<div class=\"row\">\n  <div class=\"col-xs-12\">\n    <form [formGroup]=\"mainForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"form-group\">\n            <input\n              type=\"text\"\n              id=\"name\"\n              class=\"form-control\"\n              formControlName=\"name\"\n              placeholder=\"World Name\">\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"form-group\">\n            <!--<label for=\"image-url\">Add an Image via URL or Upload (upload will override URL if both are present)</label>-->\n            <input\n              type=\"text\"\n              id=\"imagePath\"\n              class=\"form-control\"\n              formControlName=\"imagePath\"\n              placeholder=\"World Image URL\"\n              #imageUrl>\n            <!--OR-->\n            <!--<input type=\"file\" id=\"imgUpload\">-->\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"img\">\n            <img [src]=\"imageUrl.value\"><br/>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"form-group\">\n            <textarea\n              type=\"text\"\n              id=\"prologue\"\n              rows=\"6\"\n              class=\"form-control\"\n              formControlName=\"prologue\"\n              placeholder=\"World Prologue\"></textarea>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!mainForm.valid\">Save</button>\n          <a class=\"btn btn-danger\" (click)=\"onCancel()\">Cancel</a>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n"
+module.exports = "<p *ngIf=\"!isNew\">\n  Edit World\n</p>\n<p *ngIf=\"isNew\">\n  Create New World\n</p>\n<div class=\"row\">\n  <div class=\"col-xs-12\">\n    <form [formGroup]=\"mainForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"form-group\">\n            <input\n              type=\"text\"\n              id=\"name\"\n              class=\"form-control\"\n              formControlName=\"name\"\n              placeholder=\"World Name\">\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"form-group\">\n            <!--<label for=\"image-url\">Add an Image via URL or Upload (upload will override URL if both are present)</label>-->\n            <input\n              type=\"text\"\n              id=\"imagePath\"\n              class=\"form-control\"\n              formControlName=\"imagePath\"\n              placeholder=\"World Image URL\"\n              #imageUrl>\n            <!--OR-->\n            <!--<input type=\"file\" id=\"imgUpload\">-->\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"img\">\n            <img [src]=\"imageUrl.value\"><br/>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <div class=\"form-group\">\n            <textarea\n              type=\"text\"\n              id=\"prologue\"\n              rows=\"6\"\n              class=\"form-control\"\n              formControlName=\"prologue\"\n              placeholder=\"World Prologue\"></textarea>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-12\">\n          <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!mainForm.valid\">Save</button>\n          <a class=\"btn btn-danger\" (click)=\"onCancel()\">Cancel</a>\n        </div>\n      </div>\n    </form>\n    <button *ngIf=\"index\" type=\"button\" class=\"btn btn-lg btn-default\" (click)=\"addStory()\">Add a Story</button>\n  </div>\n</div>\n"
 
 /***/ },
 /* 750 */
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  world-list works!\n</p>\n<div>\n<div class=\"item\" *ngFor=\"let x of db.keys; let i = index;\" (click)=\"choice(i)\">\n  <div>{{db.items[x].name}}</div>\n  <span><a href=\"#\" (click)=\"edit(i)\">Edit</a></span>\n  <button class=\"deleteButton\" (click)=\"remove(i)\">X</button>\n</div>\n</div>\n"
+module.exports = "<h3>\n  List of Worlds\n</h3>\n<div>\n  <div class=\"item\" *ngFor=\"let x of db.keys; let i = index;\" (click)=\"choice(i)\">\n    <div>{{db.items[x].name}}</div>\n    <button class=\"deleteButton\" (click)=\"edit(i)\">Edit</button>\n    <button class=\"deleteButton\" (click)=\"remove(i)\">Delete</button>\n  </div>\n  <button type=\"button\" class=\"btn btn-lg btn-default\" (click)=\"newWorld()\">New World</button>\n</div>\n"
 
 /***/ },
 /* 751 */
