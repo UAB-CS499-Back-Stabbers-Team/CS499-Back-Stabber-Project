@@ -1,3 +1,66 @@
-<p>
-  world-edit works!
+<p *ngIf="!isNew">
+  Edit World
 </p>
+<p *ngIf="isNew">
+  Create New World
+</p>
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              formControlName="name"
+              placeholder="World Name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <!--<label for="image-url">Add an Image via URL or Upload (upload will override URL if both are present)</label>-->
+            <input
+              type="text"
+              id="imagePath"
+              class="form-control"
+              formControlName="imagePath"
+              placeholder="World Image URL"
+              #imageUrl>
+            <!--OR-->
+            <!--<input type="file" id="imgUpload">-->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="img">
+            <img [src]="imageUrl.value"><br/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <textarea
+              type="text"
+              id="prologue"
+              rows="6"
+              class="form-control"
+              formControlName="prologue"
+              placeholder="World Prologue"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-success" [disabled]="!mainForm.valid">Save</button>
+          <a class="btn btn-danger" (click)="onCancel()">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

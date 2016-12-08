@@ -7,9 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var WorldListComponent = (function () {
-    function WorldListComponent() {
+    function WorldListComponent(db, router, ms) {
+        this.db = db;
+        this.router = router;
+        this.ms = ms;
     }
-    WorldListComponent.prototype.ngOnInit = function () {
+    WorldListComponent.prototype.choice = function (i) {
+        this.router.navigate(['../world/' + i]);
+    };
+    WorldListComponent.prototype.remove = function (i) {
+        if (confirm('This will completely remove the item. Choose confirm to continue in removing the item or cancel.'))
+            this.db.remove(i);
+    };
+    WorldListComponent.prototype.edit = function (i) {
+        this.router.navigate(['world/' + i + '/edit']);
     };
     WorldListComponent = __decorate([
         core_1.Component({

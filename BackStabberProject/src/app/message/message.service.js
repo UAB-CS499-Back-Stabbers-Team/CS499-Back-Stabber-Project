@@ -8,9 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require('@angular/core');
 var MessageService = (function () {
     function MessageService() {
+        this.q = [];
     }
     MessageService.prototype.error = function (message) {
         console.log(message);
+    };
+    MessageService.prototype.msgDisplay = function (message) {
+        alert(message);
+    };
+    MessageService.prototype.msgStore = function (message) {
+        this.q.push(message);
+    };
+    MessageService.prototype.disp = function () {
+        while (this.q.length > 0) {
+            this.msgDisplay(this.q.pop());
+        }
     };
     MessageService = __decorate([
         core_1.Injectable()

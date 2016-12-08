@@ -1,13 +1,12 @@
+"use strict";
 /**
  * Created by cwcordell on 10/24/16.
  */
-"use strict";
 var Choice = (function () {
-    function Choice(id, text, moralRuleId, image) {
+    function Choice(id, text, moralRule) {
         this.id = id;
         this.text = text;
-        this.moralRuleId = moralRuleId;
-        this.image = image;
+        this.moralRule = moralRule;
     }
     return Choice;
 }());

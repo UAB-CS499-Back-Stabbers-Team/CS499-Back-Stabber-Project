@@ -12,6 +12,7 @@ var auth_service_1 = require("./services/auth.service");
 var user_service_1 = require("./user/user.service");
 var message_service_1 = require("./message/message.service");
 var db_service_1 = require("./services/db.service");
+var storage_service_1 = require("./services/storage.service");
 // declare var currentUser: any;
 var AppComponent = (function () {
     function AppComponent() {
@@ -21,7 +22,7 @@ var AppComponent = (function () {
             selector: 'bsp-root',
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.css'],
-            providers: [firebase_service_1.FirebaseService, auth_service_1.AuthService, user_service_1.UserService, message_service_1.MessageService, db_service_1.DbService]
+            providers: [firebase_service_1.FirebaseService, auth_service_1.AuthService, user_service_1.UserService, message_service_1.MessageService, db_service_1.DbService, storage_service_1.StorageService]
         })
     ], AppComponent);
     return AppComponent;

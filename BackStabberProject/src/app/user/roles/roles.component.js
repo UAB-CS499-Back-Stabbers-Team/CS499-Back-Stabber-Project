@@ -12,7 +12,7 @@ var Role_ts_1 = require("./Role.ts");
 var RolesComponent = (function () {
     function RolesComponent(db) {
         this.db = db;
-        this.editing = 'New Rule';
+        this.editing = 'New Role';
         this.oldItem = new Role_ts_1.Role('', '');
         this.newItem = new Role_ts_1.Role('', '');
     }

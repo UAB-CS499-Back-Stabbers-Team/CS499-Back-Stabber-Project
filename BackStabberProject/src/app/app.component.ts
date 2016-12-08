@@ -5,13 +5,14 @@ import { AuthService } from "./services/auth.service";
 import { UserService } from "./user/user.service";
 import { MessageService } from "./message/message.service";
 import { DbService } from "./services/db.service";
+import { StorageService } from "./services/storage.service";
 // declare var currentUser: any;
 
 @Component({
   selector: 'bsp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [FirebaseService, AuthService, UserService, MessageService, DbService]
+  providers: [FirebaseService, AuthService, UserService, MessageService, DbService, StorageService]
 })
 export class AppComponent {
   // title = 'app works!';

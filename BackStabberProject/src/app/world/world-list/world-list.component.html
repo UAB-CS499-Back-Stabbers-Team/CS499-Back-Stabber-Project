@@ -1,3 +1,10 @@
 <p>
   world-list works!
 </p>
+<div>
+<div class="item" *ngFor="let x of db.keys; let i = index;" (click)="choice(i)">
+  <div>{{db.items[x].name}}</div>
+  <button class="deleteButton" (click)="edit(i)">Edit</button>
+  <button class="deleteButton" (click)="remove(i)">Delete</button>
+</div>
+</div>

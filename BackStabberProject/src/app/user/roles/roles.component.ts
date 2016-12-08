@@ -15,7 +15,7 @@ export class RolesComponent implements OnInit {
   newItem: Role;
   oldItem: Role;
   isNew: boolean;
-  editing = 'New Rule';
+  editing = 'New Role';
 
   constructor(private db: RolesService) {
     this.oldItem = new Role('', '');

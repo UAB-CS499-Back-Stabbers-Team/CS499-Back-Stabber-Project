@@ -19,3 +19,7 @@ html, body {
 .main {
   margin-top: 75px;
 }
+
+.deleteButton {
+background-color: red;
+}

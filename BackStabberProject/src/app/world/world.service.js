@@ -7,18 +7,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var World_1 = require("./World");
+var Story_1 = require("./story/Story");
+var Choice_1 = require("./story/choice/Choice");
 var WorldService = (function () {
-    function WorldService(db) {
+    function WorldService(db, ss) {
         var _this = this;
         this.db = db;
+        this.ss = ss;
         this.dbPath = 'world';
         this.keys = [];
         this.items = {};
+        this.done = false;
         this.cr = this.db.getChildRef(this.dbPath);
         this.getAll(function (snapShot) { return _this.process(snapShot); });
+        console.log(this.items);
     }
     WorldService.prototype.ngOnDestroy = function () {
         this.cr.off();
+    };
+    WorldService.prototype.getItemById = function (id) {
+        var x = this.items[id];
+        if (x)
+            return x;
+        else
+            return null;
     };
     WorldService.prototype.getItemByIndex = function (i) {
         return this.items[this.keys[i]];
@@ -26,9 +38,9 @@ var WorldService = (function () {
     WorldService.prototype.keyExists = function (key) {
         return this.cr.once('value').exists(key);
     };
-    // public getChildRef(path: any) {
-    //   return this.db.getChildRef(path);
-    // }
+    WorldService.prototype.getChildRef = function (path) {
+        return this.db.getChildRef(path);
+    };
     WorldService.prototype.getAll = function (func) {
         return this.cr.on('value', func);
     };
@@ -36,7 +48,8 @@ var WorldService = (function () {
         this.cr.child(this.keys[i]).remove();
     };
     WorldService.prototype.set = function (item) {
-        if (item.id == '')
+        console.log(item);
+        if (item.id == null)
             item.id = this.cr.push().key;
         this.cr.child(item.id).set(item);
     };
@@ -48,9 +61,39 @@ var WorldService = (function () {
             snap.forEach(function (s) {
                 _this.keys.push(s.key);
                 var v = s.val();
-                _this.items[s.key] = new World_1.World(s.key, v.name, v.prologue, v.image, v.stories);
+                _this.items[s.key] = new World_1.World(v.id, v.name, v.prologue, v.imageURL, _this.storyProcess(v.stories));
             });
         }
+        this.done = true;
+    };
+    WorldService.prototype.storyProcess = function (stories) {
+        var ar = [];
+        if (stories != null) {
+            for (var i = 0; i < stories.length; i++) {
+                var x = stories[i];
+                ar.push(new Story_1.Story(x.id, x.worldId, x.title, x.prologue, this.choiceProcess(x.choices)));
+            }
+            return ar;
+        }
+        else {
+            return [];
+        }
+    };
+    WorldService.prototype.choiceProcess = function (items) {
+        var ar = [];
+        if (items != null) {
+            for (var i = 0; i < items.length; i++) {
+                var x = items[i];
+                ar.push(new Choice_1.Choice(x.id, x.text, x.moralRule));
+            }
+            return ar;
+        }
+        else {
+            return [];
+        }
+    };
+    WorldService.prototype.getImageUrl = function (path, success, error) {
+        return this.ss.getFileUrl(path, success, error);
     };
     WorldService = __decorate([
         core_1.Injectable()

@@ -20,7 +20,7 @@
   <div class="row">
     <div style="background-color: gray; border: 1px solid black;" *ngFor="let key of db.keys; let i = index">
       <div (click)="edit(i)" style="block: inline">{{db.items[key].name}}</div>
-      <button (click)="remove(i)" style="background-color: red">X</button>
+      <button class="deleteButton" (click)="remove(i)">X</button>
     </div>
   </div>
 </div>
