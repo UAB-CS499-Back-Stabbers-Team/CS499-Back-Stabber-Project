@@ -45,7 +45,7 @@ var StoryComponent = (function () {
                 }
                 else {
                     _this.isNew = true;
-                    _this.item = new Story_1.Story(Date.now(), '', '', '', '', '', '', '');
+                    _this.item = new Story_1.Story(Date.now().toString(), '', '', '', '', '', '', '');
                 }
             }
         });

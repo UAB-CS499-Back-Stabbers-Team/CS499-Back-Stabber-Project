@@ -54,7 +54,7 @@ export class StoryComponent implements OnInit {
             }
           } else {
             this.isNew = true;
-            this.item = new Story(Date.now(), '', '', '', '', '', '', '');
+            this.item = new Story(Date.now().toString(), '', '', '', '', '', '', '');
           }
         }
       }
