@@ -121,8 +121,6 @@ var GameComponent = (function () {
     //   }
     // }
     GameComponent.prototype.end = function () {
-        console.log(this.kant);
-        console.log(this.util);
     };
     GameComponent.prototype.nextWorld = function () {
         this.currentWorldIndex++;

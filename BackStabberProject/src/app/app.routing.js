@@ -9,11 +9,13 @@ var world_component_1 = require("./world/world.component");
 var moral_rule_component_1 = require("./moral-rule/moral-rule.component");
 var world_routes_1 = require("./world/world.routes");
 var roles_component_1 = require("./user/roles/roles.component");
+var game_component_1 = require("./game/game.component");
 var APP_ROUTES = [
     { path: 'login-signup', component: login_signup_component_1.LoginSignupComponent },
     { path: 'about', component: about_component_1.AboutComponent },
     // {path: 'user/:id', component: UserComponent, children: USER_ROUTES},
     // {path: 'user', component: UserComponent, children: USER_ROUTES},
+    { path: 'game', component: game_component_1.GameComponent },
     { path: 'users', component: user_component_1.UserComponent, children: user_routing_1.USER_ROUTES },
     { path: 'roles', component: roles_component_1.RolesComponent, pathMatch: 'full' },
     { path: 'moral-rule', component: moral_rule_component_1.MoralRuleComponent, pathMatch: 'full' },

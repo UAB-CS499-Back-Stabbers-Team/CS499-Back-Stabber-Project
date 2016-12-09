@@ -8,12 +8,14 @@ import {WorldComponent} from "./world/world.component";
 import {MoralRuleComponent} from "./moral-rule/moral-rule.component";
 import {WORLD_ROUTES} from "./world/world.routes";
 import {RolesComponent} from "./user/roles/roles.component";
+import {GameComponent} from "./game/game.component";
 
 const APP_ROUTES: Routes = [
   {path: 'login-signup', component: LoginSignupComponent},
   {path: 'about', component: AboutComponent},
   // {path: 'user/:id', component: UserComponent, children: USER_ROUTES},
   // {path: 'user', component: UserComponent, children: USER_ROUTES},
+  {path: 'game', component: GameComponent},
   {path: 'users', component: UserComponent, children: USER_ROUTES},
   {path: 'roles', component: RolesComponent, pathMatch: 'full'},
   {path: 'moral-rule', component: MoralRuleComponent, pathMatch: 'full'},

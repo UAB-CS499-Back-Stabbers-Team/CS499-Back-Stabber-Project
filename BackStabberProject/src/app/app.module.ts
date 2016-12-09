@@ -29,6 +29,7 @@ import {WorldListComponent} from "./world/world-list/world-list.component";
 import {WorldEditComponent} from "./world/world-edit/world-edit.component";
 import {WorldDetailComponent} from "./world/world-detail/world-detail.component";
 import {RolesComponent} from "./user/roles/roles.component";
+import {GameComponent} from "./game/game.component";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {RolesComponent} from "./user/roles/roles.component";
     StoryComponent,
     ChoiceComponent,
     MoralRuleComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

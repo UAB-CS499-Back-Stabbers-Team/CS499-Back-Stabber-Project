@@ -35,6 +35,7 @@ var world_list_component_1 = require("./world/world-list/world-list.component");
 var world_edit_component_1 = require("./world/world-edit/world-edit.component");
 var world_detail_component_1 = require("./world/world-detail/world-detail.component");
 var roles_component_1 = require("./user/roles/roles.component");
+var game_component_1 = require("./game/game.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -65,6 +66,7 @@ var AppModule = (function () {
                 story_component_1.StoryComponent,
                 choice_component_1.ChoiceComponent,
                 moral_rule_component_1.MoralRuleComponent,
+                game_component_1.GameComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

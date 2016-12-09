@@ -140,8 +140,7 @@ export class GameComponent implements OnInit {
   // }
 
   end() {
-    console.log(this.kant);
-    console.log(this.util);
+
   }
 
   nextWorld() {

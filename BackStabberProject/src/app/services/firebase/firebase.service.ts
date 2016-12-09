@@ -17,6 +17,10 @@ export class FirebaseService {
 
   constructor() {}
 
+  getDb() {
+    return this.db;
+  }
+
   signinUser(email, pass) {
     return this.auth.signInWithEmailAndPassword(email, pass);
   }

@@ -35,6 +35,7 @@ export class StoryComponent implements OnInit {
       (params: any) => {
         if (params.hasOwnProperty('worldIndex')) {
           this.worldIndex = +params['worldIndex'];
+          while(!this.db.done) {}
           this.world = this.db.getItemByIndex(this.worldIndex);
 
           if (params.hasOwnProperty('storyIndex')) {
@@ -110,21 +111,21 @@ export class StoryComponent implements OnInit {
 
   onSubmit() {
     console.log(this.mainForm);
-    let v = this.mainForm.value;
-    this.item.worldId = this.world.id;
-    this.item.title = v.name;
-    this.item.prologue = v.prologue;
-    this.item.choice1Text = v.choice1Text;
-    this.item.choice1Rule = v.choice1Rule;
-    this.item.choice2Text = v.choice2Text;
-    this.item.choice2Rule = v.choice2Rule;
-    // console.log(v.imagePath);
-    // console.log(this.mainForm);
-    // console.log(v);
+    // let v = this.mainForm.value; console.log(this.world);
+    // this.item.worldId = this.world.id;
+    // this.item.title = v.name;
+    // this.item.prologue = v.prologue;
+    // this.item.choice1Text = v.choice1Text;
+    // this.item.choice1Rule = v.choice1Rule;
+    // this.item.choice2Text = v.choice2Text;
+    // this.item.choice2Rule = v.choice2Rule;
+    //
     // console.log(this.item);
-    // console.log("Files");
-
-    this.db.set(this.world);
+    //
+    // if(this.isNew) this.world.stories.push(this.item);
+    // else this.world.stories[this.storyIndex] = this.item;
+    // console.log(this.world);
+    // this.db.set(this.world);
   //   // this.router.navigate(['../world/:id/story/:sid']);
   }
   //

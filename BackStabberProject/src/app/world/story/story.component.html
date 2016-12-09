@@ -4,7 +4,6 @@ Edit Story
 <p *ngIf="isNew">
 Create New Story
 </p>
-<div *ngIf="dberror" class="alert alert-danger">{{dberror}}</div>
 <form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="mainForm">
   <div>
     <div class="input input-group-lg">

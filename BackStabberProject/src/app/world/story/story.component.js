@@ -24,6 +24,7 @@ var StoryComponent = (function () {
         this.subscription = this.route.params.subscribe(function (params) {
             if (params.hasOwnProperty('worldIndex')) {
                 _this.worldIndex = +params['worldIndex'];
+                while (!_this.db.done) { }
                 _this.world = _this.db.getItemByIndex(_this.worldIndex);
                 if (params.hasOwnProperty('storyIndex')) {
                     console.log('in params');
@@ -91,20 +92,21 @@ var StoryComponent = (function () {
     };
     StoryComponent.prototype.onSubmit = function () {
         console.log(this.mainForm);
-        var v = this.mainForm.value;
-        this.item.worldId = this.world.id;
-        this.item.title = v.name;
-        this.item.prologue = v.prologue;
-        this.item.choice1Text = v.choice1Text;
-        this.item.choice1Rule = v.choice1Rule;
-        this.item.choice2Text = v.choice2Text;
-        this.item.choice2Rule = v.choice2Rule;
-        // console.log(v.imagePath);
-        // console.log(this.mainForm);
-        // console.log(v);
+        // let v = this.mainForm.value; console.log(this.world);
+        // this.item.worldId = this.world.id;
+        // this.item.title = v.name;
+        // this.item.prologue = v.prologue;
+        // this.item.choice1Text = v.choice1Text;
+        // this.item.choice1Rule = v.choice1Rule;
+        // this.item.choice2Text = v.choice2Text;
+        // this.item.choice2Rule = v.choice2Rule;
+        //
         // console.log(this.item);
-        // console.log("Files");
-        this.db.set(this.world);
+        //
+        // if(this.isNew) this.world.stories.push(this.item);
+        // else this.world.stories[this.storyIndex] = this.item;
+        // console.log(this.world);
+        // this.db.set(this.world);
         //   // this.router.navigate(['../world/:id/story/:sid']);
     };
     StoryComponent = __decorate([

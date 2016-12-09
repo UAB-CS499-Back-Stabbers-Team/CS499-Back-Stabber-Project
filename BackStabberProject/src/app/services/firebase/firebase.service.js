@@ -20,6 +20,9 @@ var FirebaseService = (function () {
             providerId: null
         };
     }
+    FirebaseService.prototype.getDb = function () {
+        return this.db;
+    };
     FirebaseService.prototype.signinUser = function (email, pass) {
         return this.auth.signInWithEmailAndPassword(email, pass);
     };
