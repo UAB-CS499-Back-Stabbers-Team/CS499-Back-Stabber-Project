@@ -1,0 +1,14 @@
+<div>
+  <img [src]="currentWorld.imageURL">
+  <div>{{currentWorld.name}}</div>
+  <div>{{currentWorld.prologue}}</div>
+  <!--<div>{{world.image}}</div>-->
+  <!--<div>{{world.name}}</div>-->
+  <div *ngFor="let x of currentWorld.stories; let i = index" >
+    <div>{{x.title}}</div>
+    <div>{{x.prologue}}</div>
+    <button type="button" class="btn btn-lg btn-default" (click)="result(currentWorld.name, i, x.choice1Rule)">{{x.choice1Text}}</button>
+    <button type="button" class="btn btn-lg btn-default" (click)="result(currentWorld.name, i, x.choice2Rule)">{{x.choice2Text}}</button>
+  </div>
+  <button *ngIf="!(currentWorldIndex == items.length)" type="button" class="btn btn-lg btn-default" (click)="nextWorld()">Next World</button>
+</div>
