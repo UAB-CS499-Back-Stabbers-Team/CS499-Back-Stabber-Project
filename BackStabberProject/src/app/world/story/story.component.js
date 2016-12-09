@@ -16,6 +16,7 @@ var StoryComponent = (function () {
         this.formBuilder = formBuilder;
         this.ms = ms;
         this.choices = [];
+        this.storyIndex = null;
         this.valid = false;
     }
     StoryComponent.prototype.ngOnInit = function () {
@@ -44,7 +45,7 @@ var StoryComponent = (function () {
                 }
                 else {
                     _this.isNew = true;
-                    _this.item = new Story_1.Story('', '', '', '', []);
+                    _this.item = new Story_1.Story(Date.now(), '', '', '', '', '', '', '');
                 }
             }
         });
@@ -59,21 +60,20 @@ var StoryComponent = (function () {
         this.valid = this.mainForm.valid;
         console.log("Valid: " + this.valid);
     };
-    StoryComponent.prototype.initChoice = function () {
-        return new forms_1.FormControl('', []);
+    StoryComponent.prototype.initChoice = function (txt, rule) {
+        return new forms_1.FormGroup({
+            text: new forms_1.FormControl(txt, [forms_1.Validators.required, forms_1.Validators.minLength(8), forms_1.Validators.maxLength(32)]),
+            moralRule: new forms_1.FormControl(rule)
+        });
     };
     StoryComponent.prototype.initForm = function () {
-        var choicesArray = new forms_1.FormArray([]);
-        for (var i = 0; i < this.item.choices.length; i++) {
-            choicesArray.push(new forms_1.FormGroup({
-                text: new forms_1.FormControl(this.item.choices[i].text, [forms_1.Validators.required, forms_1.Validators.minLength(8), forms_1.Validators.maxLength(32)]),
-                moralRule: new forms_1.FormControl(this.item.choices[i].moralRule)
-            }));
-        }
         this.mainForm = this.formBuilder.group({
             title: [this.item.title, forms_1.Validators.required],
             prologue: [this.item.prologue, forms_1.Validators.required],
-            choices: choicesArray
+            choice1Rule: [this.item.choice1Rule, forms_1.Validators.required],
+            choice1Text: [this.item.choice1Text, forms_1.Validators.required],
+            choice2Rule: [this.item.choice2Rule, forms_1.Validators.required],
+            choice2Text: [this.item.choice2Text, forms_1.Validators.required]
         });
         console.log(this.mainForm);
     };
@@ -82,6 +82,30 @@ var StoryComponent = (function () {
     };
     StoryComponent.prototype.onCancel = function () {
         this.router.navigate(['../world']);
+    };
+    // onRemoveChoice(i) {
+    //   this.item.choices.splice( i, 1 );
+    // }
+    StoryComponent.prototype.onAddChoice = function () {
+        this.mainForm.controls['choices'].push(this.initChoice('', ''));
+    };
+    StoryComponent.prototype.onSubmit = function () {
+        console.log(this.mainForm);
+        var v = this.mainForm.value;
+        this.item.worldId = this.world.id;
+        this.item.title = v.name;
+        this.item.prologue = v.prologue;
+        this.item.choice1Text = v.choice1Text;
+        this.item.choice1Rule = v.choice1Rule;
+        this.item.choice2Text = v.choice2Text;
+        this.item.choice2Rule = v.choice2Rule;
+        // console.log(v.imagePath);
+        // console.log(this.mainForm);
+        // console.log(v);
+        // console.log(this.item);
+        // console.log("Files");
+        this.db.set(this.world);
+        //   // this.router.navigate(['../world/:id/story/:sid']);
     };
     StoryComponent = __decorate([
         core_1.Component({

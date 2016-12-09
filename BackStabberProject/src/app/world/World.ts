@@ -5,13 +5,13 @@
 import { Story } from "./story/Story";
 
 export class World {
-  id: number;
+  id: string;
   name: string;
   prologue: string;
   imageURL: string;
   stories: Story[];
 
-  constructor(id: number, name: string, prologue: string, image: string, stories: Story[]) {
+  constructor(id: string, name: string, prologue: string, image: string, stories: Story[]) {
     this.id = id;
     this.name = name;
     this.prologue = prologue;

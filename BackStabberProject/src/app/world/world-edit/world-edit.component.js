@@ -83,7 +83,7 @@ var WorldEditComponent = (function () {
         if (this.isNew)
             this.router.navigate(['../world/:id/story/new']);
         else
-            this.router.navigate(['../world/:id/story/:id']);
+            this.navigateBack();
     };
     WorldEditComponent.prototype.navigateBack = function () {
         this.router.navigate(['../']);

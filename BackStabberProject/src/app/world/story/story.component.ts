@@ -22,7 +22,7 @@ export class StoryComponent implements OnInit {
   subscription: Subscription;
   isNew: boolean;
   worldIndex: number;
-  storyIndex: number;
+  storyIndex: number = null;
   mainForm: FormGroup;
   valid: boolean = false;
   path: string;
@@ -54,7 +54,7 @@ export class StoryComponent implements OnInit {
             }
           } else {
             this.isNew = true;
-            this.item = new Story('', '', '', '', []);
+            this.item = new Story(Date.now(), '', '', '', '', '', '', '');
           }
         }
       }
@@ -73,26 +73,21 @@ export class StoryComponent implements OnInit {
     console.log("Valid: " + this.valid);
   }
 
-  initChoice() {
-    return new FormControl('', []);
+  initChoice(txt, rule) {
+    return new FormGroup({
+      text: new FormControl(txt, [Validators.required, Validators.minLength(8), Validators.maxLength(32)]),
+      moralRule: new FormControl(rule)
+    })
   }
 
   private initForm() {
-    let choicesArray = new FormArray([]);
-    for(let i = 0; i < this.item.choices.length; i++) {
-      choicesArray.push(new FormGroup(
-        {
-          text: new FormControl(this.item.choices[i].text, [Validators.required, Validators.minLength(8), Validators.maxLength(32)]),
-          moralRule: new FormControl(this.item.choices[i].moralRule),
-        }
-        )
-      );
-    }
-
     this.mainForm = this.formBuilder.group({
       title: [this.item.title, Validators.required],
       prologue: [this.item.prologue, Validators.required],
-      choices: choicesArray
+      choice1Rule: [this.item.choice1Rule, Validators.required],
+      choice1Text: [this.item.choice1Text, Validators.required],
+      choice2Rule: [this.item.choice2Rule, Validators.required],
+      choice2Text: [this.item.choice2Text, Validators.required],
     });
     console.log(this.mainForm);
   }
@@ -105,26 +100,33 @@ export class StoryComponent implements OnInit {
     this.router.navigate(['../world']);
   }
 
-  // onSubmit() {
-  //   console.log(this.mainForm);
-  //   let v = this.mainForm.value;
-  //   this.item.name = v.name;
-  //   this.item.prologue = v.prologue;
-  //   this.item.imageURL = v.imagePath;
-  //   if(this.item.imageURL == '') {
-  //     alert('item image is blank');
-  //   } else if(v.imagePath == '') {
-  //     alert('imagePath is blank');
-  //   }
-  //   // console.log(v.imagePath);
-  //   // console.log(this.mainForm);
-  //   // console.log(v);
-  //   // console.log(this.item);
-  //   // console.log("Files");
-  //
-  //   this.db.set(this.item);
-  //   // this.router.navigate(['../world/:id/story/:sid']);
+  // onRemoveChoice(i) {
+  //   this.item.choices.splice( i, 1 );
   // }
+
+  onAddChoice() {
+    (<FormArray>this.mainForm.controls['choices']).push(this.initChoice('',''));
+  }
+
+  onSubmit() {
+    console.log(this.mainForm);
+    let v = this.mainForm.value;
+    this.item.worldId = this.world.id;
+    this.item.title = v.name;
+    this.item.prologue = v.prologue;
+    this.item.choice1Text = v.choice1Text;
+    this.item.choice1Rule = v.choice1Rule;
+    this.item.choice2Text = v.choice2Text;
+    this.item.choice2Rule = v.choice2Rule;
+    // console.log(v.imagePath);
+    // console.log(this.mainForm);
+    // console.log(v);
+    // console.log(this.item);
+    // console.log("Files");
+
+    this.db.set(this.world);
+  //   // this.router.navigate(['../world/:id/story/:sid']);
+  }
   //
   // navigateBack() {
   //   this.router.navigate(['../']);

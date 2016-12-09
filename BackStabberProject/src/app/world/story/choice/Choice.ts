@@ -4,12 +4,10 @@ import { MoralRule } from "../../../moral-rule/moralRule";
  */
 
 export class Choice {
-  id: number;
   text: string;
-  moralRule: MoralRule;
+  moralRule: string;
 
-  constructor(id: number, text: string, moralRule: MoralRule) {
-    this.id = id;
+  constructor(text: string, moralRule: string) {
     this.text = text;
     this.moralRule = moralRule;
   }

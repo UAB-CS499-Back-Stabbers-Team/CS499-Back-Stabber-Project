@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require('@angular/core');
 var World_1 = require("./World");
 var Story_1 = require("./story/Story");
-var Choice_1 = require("./story/choice/Choice");
 var WorldService = (function () {
     function WorldService(db, ss) {
         var _this = this;
@@ -71,7 +70,7 @@ var WorldService = (function () {
         if (stories != null) {
             for (var i = 0; i < stories.length; i++) {
                 var x = stories[i];
-                ar.push(new Story_1.Story(x.id, x.worldId, x.title, x.prologue, this.choiceProcess(x.choices)));
+                ar.push(new Story_1.Story(x.id, x.worldId, x.title, x.prologue, x.choice1Text, x.choice1Rule, x.choice2Text, x.choice2Rule));
             }
             return ar;
         }
@@ -79,19 +78,19 @@ var WorldService = (function () {
             return [];
         }
     };
-    WorldService.prototype.choiceProcess = function (items) {
-        var ar = [];
-        if (items != null) {
-            for (var i = 0; i < items.length; i++) {
-                var x = items[i];
-                ar.push(new Choice_1.Choice(x.id, x.text, x.moralRule));
-            }
-            return ar;
-        }
-        else {
-            return [];
-        }
-    };
+    // public choiceProcess(items: Choice[]) {
+    //   let ar = [];
+    //
+    //   if(items != null) {
+    //     for(var i = 0; i < items.length; i++) {
+    //       let x = items[i];
+    //       ar.push(new Choice(x.id, x.text, x.moralRule));
+    //     }
+    //     return ar;
+    //   } else {
+    //     return [];
+    //   }
+    // }
     WorldService.prototype.getImageUrl = function (path, success, error) {
         return this.ss.getFileUrl(path, success, error);
     };

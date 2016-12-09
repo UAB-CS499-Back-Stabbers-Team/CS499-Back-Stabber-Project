@@ -1,6 +1,9 @@
-<h2>
-  Story
-</h2>
+<p *ngIf="!isNew">
+Edit Story
+</p>
+<p *ngIf="isNew">
+Create New Story
+</p>
 <div *ngIf="dberror" class="alert alert-danger">{{dberror}}</div>
 <form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="mainForm">
   <div>
@@ -11,138 +14,42 @@
     <div class="input input-group-lg">
       <textarea class="form-control no-errors" id="prologue" name="prologue" placeholder="Prologue" [(ngModel)]="prologue" formControlName="prologue"></textarea>
     </div>
-
+    <div class="col-sm-5">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Choice Text"
+      formControlName="choice1Text">
   </div>
+    <div class="col-sm-5">
+      <select
+        type="text"
+        class="form-control"
+        formControlName="choice1Rule">
+        <option value="kantian" selected>Kantian</option>
+        <option value="utilitarian">Utilitarian</option>
+      </select>
+    </div>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Choice Text"
+        formControlName="choice2Text">
+    </div>
+    <div class="col-sm-5">
+      <select
+        type="text"
+        class="form-control"
+        formControlName="choice2Rule">
+        <option value="kantian" selected>Kantian</option>
+        <option value="utilitarian">Utilitarian</option>
+      </select>
+    </div>
+  </div>
+
   <div class="col-xs-12">
     <button type="submit" class="btn btn-success" [disabled]="!mainForm.valid">Save</button>
     <a class="btn btn-danger" (click)="onCancel()">Cancel</a>
   </div>
-  <!--<div *ngFor="let er of myForm.controls['email'].errors">{{er}}</div>-->
 </form>
-
-<!--<p *ngIf="!isNew">-->
-  <!--Edit World-->
-<!--</p>-->
-<!--<p *ngIf="isNew">-->
-  <!--Create New World-->
-<!--</p>-->
-<!--<div class="row">-->
-  <!--<div class="col-xs-12">-->
-    <!--<form [formGroup]="mainForm" (ngSubmit)="onSubmit()">-->
-      <!--<div class="row">-->
-        <!--<div class="col-xs-12">-->
-          <!--<div class="form-group">-->
-            <!--<input-->
-              <!--type="text"-->
-              <!--id="name"-->
-              <!--class="form-control"-->
-              <!--formControlName="name"-->
-              <!--placeholder="World Name">-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-        <!--<div class="col-xs-12">-->
-          <!--<div class="form-group">-->
-            <!--<input-->
-              <!--type="text"-->
-              <!--id="image-url"-->
-              <!--class="form-control"-->
-              <!--formContolName="imageUrl"-->
-              <!--placeholder="World Image URL"-->
-              <!--#imageUrl>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-        <!--<div class="col-xs-12">-->
-          <!--<div class="img">-->
-            <!--<img [src]="imageUrl.value">-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-        <!--<div class="col-xs-12">-->
-          <!--<div class="form-group">-->
-            <!--<textarea-->
-              <!--type="text"-->
-              <!--id="prologue"-->
-              <!--rows="6"-->
-              <!--class="form-control"-->
-              <!--formControlName="prologue"-->
-              <!--placeholder="World Prologue"></textarea>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<h4>World Stories</h4>-->
-      <!--<div class="row" style="background-color: grey;">-->
-        <!--<div class="col-xs-12">-->
-          <!--<ul class="list-group" formArrayName="stories">-->
-            <!--<div class="row" *ngFor="let story of mainForm.controls['stories'].controls; let i = index">-->
-              <!--<div formGroupName="{{i}}">-->
-                <!--<div class="col-sm-5">-->
-                  <!--<input-->
-                    <!--type="text"-->
-                    <!--class="form-control"-->
-                    <!--formControlName="storyTitle"-->
-                    <!--placeholder="Story Title">-->
-                <!--</div>-->
-                <!--<div class="col-sm-5">-->
-                  <!--<input-->
-                    <!--type="text"-->
-                    <!--class="form-control"-->
-                    <!--formControlName="storyPrologue"-->
-                    <!--placeholder="Story Prologue">-->
-                <!--</div>-->
-                <!--<div class="col-sm-2">-->
-                  <!--<button class="btn btn-danger" (click)="onRemoveStory(i)">X</button>-->
-                <!--</div>-->
-                <!--<h4>World Story Choices</h4>-->
-                <!--<div class="row" style="background-color: green;">-->
-                  <!--<div class="col-xs-12">-->
-                    <!--<ul class="list-group" formArrayName="storyChoices">-->
-                      <!--<div class="row" *ngFor="let choice of story.controls['storyChoices']; let j = index">-->
-                        <!--<div formGroupName="{{j}}">-->
-                          <!--<div class="col-sm-5">-->
-                            <!--<input-->
-                              <!--type="text"-->
-                              <!--class="form-control"-->
-                              <!--formControlName="choiceText"-->
-                              <!--placeholder="Choice Text">-->
-                          <!--</div>-->
-                          <!--<div class="col-sm-5">-->
-                            <!--<input-->
-                              <!--type="text"-->
-                              <!--class="form-control"-->
-                              <!--formControlName="choiceImageUrl"-->
-                              <!--placeholder="Choice Image URL">-->
-                          <!--</div>-->
-                          <!--<div class="col-sm-5">-->
-                            <!--<input-->
-                              <!--type="text"-->
-                              <!--class="form-control"-->
-                              <!--formControlName="moralRule"-->
-                              <!--placeholder="Moral Rule">-->
-                          <!--</div>-->
-                          <!--<div class="col-sm-2">-->
-                            <!--<button class="btn btn-danger" (click)="onRemoveChoice(i,j)">X</button>-->
-                          <!--</div>-->
-                        <!--</div>-->
-                      <!--</div>-->
-                    <!--</ul>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</ul>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-        <!--<div class="col-xs-12">-->
-          <!--<button type="submit" class="btn btn-success" [disabled]="![valid]">Save</button>-->
-          <!--<a class="btn btn-danger" (click)="onCancel()">Cancel</a>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</form>-->
-  <!--</div>-->
-<!--</div>-->

@@ -94,7 +94,7 @@ export class WorldEditComponent implements OnInit, OnChanges {
 
     this.db.set(this.item);
     if(this.isNew) this.router.navigate(['../world/:id/story/new']);
-    else this.router.navigate(['../world/:id/story/:id']);
+    else this.navigateBack();
   }
 
   navigateBack() {
@@ -106,7 +106,7 @@ export class WorldEditComponent implements OnInit, OnChanges {
   }
 
   addStory() {
-    this.router.navigate(['../world/'+this.index+'/new'])
+    this.router.navigate(['../world/' + this.index + '/new'])
   }
 
   // imageUpdate() {

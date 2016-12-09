@@ -79,7 +79,7 @@ export class WorldService implements OnDestroy {
     if(stories != null) {
       for(var i = 0; i < stories.length; i++) {
         let x = stories[i];
-        ar.push(new Story(x.id, x.worldId, x.title, x.prologue, this.choiceProcess(<Choice[]>x.choices)));
+        ar.push(new Story(x.id, x.worldId, x.title, x.prologue, x.choice1Text, x.choice1Rule, x.choice2Text, x.choice2Rule));
       }
       return ar;
     } else {
@@ -87,19 +87,19 @@ export class WorldService implements OnDestroy {
     }
   }
 
-  public choiceProcess(items: Choice[]) {
-    let ar = [];
-
-    if(items != null) {
-      for(var i = 0; i < items.length; i++) {
-        let x = items[i];
-        ar.push(new Choice(x.id, x.text, x.moralRule));
-      }
-      return ar;
-    } else {
-      return [];
-    }
-  }
+  // public choiceProcess(items: Choice[]) {
+  //   let ar = [];
+  //
+  //   if(items != null) {
+  //     for(var i = 0; i < items.length; i++) {
+  //       let x = items[i];
+  //       ar.push(new Choice(x.id, x.text, x.moralRule));
+  //     }
+  //     return ar;
+  //   } else {
+  //     return [];
+  //   }
+  // }
 
   public getImageUrl(path: string, success: any, error: any) {
     return this.ss.getFileUrl(path, success, error);
